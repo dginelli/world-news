@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">World News</string>
+    <string name="country">Nazione di interesse</string>
+    <string name="topic">Argomento di interesse</string>
+    <string-array name="country_array">
+        <item>Italia</item>
+        <item>Francia</item>
+        <item>Germania</item>
+        <item>Spagna</item>
+        <item>Stati Uniti</item>
+    </string-array>
+    <string name="business">Business</string>
+    <string name="entertainment">Intrattenimento</string>
+    <string name="general">Generale</string>
+    <string name="health">Salute</string>
+    <string name="science">Scienza</string>
+    <string name="sports">Sport</string>
+    <string name="technology">Tecnologia</string>
+    <string name="next">Avanti</string>
+</resources>
