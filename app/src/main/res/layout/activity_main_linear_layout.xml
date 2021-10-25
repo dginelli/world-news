@@ -148,7 +148,7 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button_go"
+                    android:id="@+id/button_next"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|end"

@@ -67,7 +67,7 @@
             </androidx.cardview.widget.CardView>
 
             <Button
-                android:id="@+id/button_go"
+                android:id="@+id/button_next"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -156,7 +156,7 @@
                         app:layout_constraintTop_toBottomOf="@id/checkbox_general" />
 
                     <CheckBox
-                        android:id="@+id/checkBox_science"
+                        android:id="@+id/checkbox_science"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
@@ -173,7 +173,7 @@
                         android:layout_marginLeft="12dp"
                         android:text="@string/sports"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/checkBox_science" />
+                        app:layout_constraintTop_toBottomOf="@id/checkbox_science" />
 
                     <CheckBox
                         android:id="@+id/checkbox_technology"

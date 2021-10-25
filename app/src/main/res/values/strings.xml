@@ -2,13 +2,21 @@
     <string name="app_name">World News</string>
     <string name="country">Country of interest</string>
     <string name="topic">Topic of interest</string>
+
+    <string name="france">France</string>
+    <string name="germany">Germany</string>
+    <string name="italy">Italy</string>
+    <string name="united_kingdom">United Kingdom</string>
+    <string name="united_states">United States</string>
+
     <string-array name="country_array">
-        <item>Italy</item>
-        <item>France</item>
-        <item>Germany</item>
-        <item>Spain</item>
-        <item>US</item>
+        <item>@string/france</item>
+        <item>@string/germany</item>
+        <item>@string/italy</item>
+        <item>@string/united_kingdom</item>
+        <item>@string/united_states</item>
     </string-array>
+
     <string name="business">Business</string>
     <string name="entertainment">Entertainment</string>
     <string name="general">General</string>
@@ -17,4 +25,6 @@
     <string name="sports">Sports</string>
     <string name="technology">Technology</string>
     <string name="next">Next</string>
+    <string name="alert_text_country_of_interest">Choose at least one country of interest</string>
+    <string name="alert_text_topic_of_interest">Choose at least one topic of interest</string>
 </resources>
