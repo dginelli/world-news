@@ -71,9 +71,9 @@ public class MainActivity extends AppCompatActivity {
         setViewsChecked();
 
         mButtonNext.setOnClickListener(view -> {
+            mButtonPressedCounter++;
             if (isCountryOfInterestSelected() && isTopicOfInterestSelected()) {
                 Log.d(TAG, "One country of interest and at least one topic has been chosen");
-                mButtonPressedCounter++;
 
                 if (mButtonPressedCounter > 3) {
                     mNews.setTitle("The button has been pressed " + mButtonPressedCounter + " times");
@@ -170,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPref = getSharedPreferences(Constants.SHARED_PREFERENCES_FILE_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString(Constants.SHARED_PREFERENCES_COUNTRY_OF_INTEREST, countryShortName);
-        editor.putStringSet(Constants.SHARED_PREFERENCES_TOPIC_OF_INTEREST, topics);
+        editor.putStringSet(Constants.SHARED_PREFERENCES_TOPICS_OF_INTEREST, topics);
         editor.apply();
     }
 
@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPref = getSharedPreferences(Constants.SHARED_PREFERENCES_FILE_NAME, Context.MODE_PRIVATE);
 
         String countryOfInterest = sharedPref.getString(Constants.SHARED_PREFERENCES_COUNTRY_OF_INTEREST, null);
-        Set<String> topicsOfInterest = sharedPref.getStringSet(Constants.SHARED_PREFERENCES_TOPIC_OF_INTEREST, null);
+        Set<String> topicsOfInterest = sharedPref.getStringSet(Constants.SHARED_PREFERENCES_TOPICS_OF_INTEREST, null);
 
         if (countryOfInterest != null) {
             switch (countryOfInterest) {

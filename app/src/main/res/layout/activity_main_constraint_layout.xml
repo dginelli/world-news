@@ -20,7 +20,7 @@
             android:layout_height="wrap_content">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardview_country"
+                android:id="@+id/cardview_countries"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -77,11 +77,11 @@
                 android:text="@string/next"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cardview_topic"
+                app:layout_constraintTop_toBottomOf="@id/cardview_topics"
                 app:layout_constraintVertical_bias="1.0" />
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardview_topic"
+                android:id="@+id/cardview_topics"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -91,7 +91,7 @@
                 android:layout_marginRight="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cardview_country">
+                app:layout_constraintTop_toBottomOf="@id/cardview_countries">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
