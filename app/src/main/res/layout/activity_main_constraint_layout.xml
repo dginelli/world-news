@@ -37,7 +37,7 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textview_country"
+                        android:id="@+id/textview_countries"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
@@ -61,24 +61,10 @@
                         android:minHeight="48dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textview_country" />
+                        app:layout_constraintTop_toBottomOf="@+id/textview_countries" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
-
-            <Button
-                android:id="@+id/button_next"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="12dp"
-                android:text="@string/next"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cardview_topics"
-                app:layout_constraintVertical_bias="1.0" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardview_topics"
@@ -98,7 +84,7 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textview_topic"
+                        android:id="@+id/textview_topics"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
@@ -123,7 +109,7 @@
                         android:layout_marginTop="12dp"
                         android:text="@string/business"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/textview_topic" />
+                        app:layout_constraintTop_toBottomOf="@id/textview_topics" />
 
                     <CheckBox
                         android:id="@+id/checkbox_entertainment"
@@ -187,6 +173,20 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/button_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardview_topics"
+                app:layout_constraintVertical_bias="1.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
