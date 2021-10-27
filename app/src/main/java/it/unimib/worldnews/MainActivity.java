@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * It stores the country and the topics of interest chosen by the user
-     * in the file system throw the use of SharedPreferences API.
+     * in the file system through the use of SharedPreferences API.
      */
     private void saveInformation() {
 
