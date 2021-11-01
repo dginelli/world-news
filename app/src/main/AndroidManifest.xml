@@ -10,17 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WorldNews">
         <activity
+            android:name=".ui.LaunchScreenActivity"
+            android:exported="true"
+            android:theme="@style/Theme.App.Starting"
+            android:launchMode="singleTask"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ui.NewsActivity"
             android:exported="true" />
         <activity
             android:name=".ui.PreferencesActivity"
             android:exported="true"
             android:noHistory="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "it.unimib.worldnews"
-        minSdk 16
+        minSdk 21
         targetSdk 31
         versionCode 2
         versionName "0.0.2"
@@ -48,4 +48,6 @@ dependencies {
 
     // Testing Navigation
     androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+
+    implementation 'androidx.core:core-splashscreen:1.0.0-alpha02'
 }
