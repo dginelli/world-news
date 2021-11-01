@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">World News</string>
     <string name="country">Country of interest</string>
@@ -125,4 +126,11 @@
     <string name="next">Next</string>
     <string name="alert_text_country_of_interest">Choose at least one country of interest</string>
     <string name="alert_text_topic_of_interest">Choose at least one topic of interest</string>
+
+    <string name="country_news">News by Country</string>
+    <string name="topic_news">News by Topic</string>
+    <string name="favorites">Favorites</string>
+
+    <string name="delete_all">Delete All</string>
+
 </resources>
