@@ -32,8 +32,8 @@ public class NewsActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: the button has been pressed " + buttonPressedCounter + " times");
         Log.d(TAG, "onCreate: the news is " + news);
 
-        Toolbar myToolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(myToolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.country_news, R.id.topic_news, R.id.favorites).build();
