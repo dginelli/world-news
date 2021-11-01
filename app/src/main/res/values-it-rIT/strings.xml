@@ -4,18 +4,116 @@
     <string name="country">Nazione di interesse</string>
     <string name="topic">Argomento di interesse</string>
 
+    <string name="argentina">Argentina</string>
+    <string name="australia">Australia</string>
+    <string name="austria">Austria</string>
+    <string name="belgium">Belgio</string>
+    <string name="brazil">Brasile</string>
+    <string name="bulgaria">Bulgaria</string>
+    <string name="canada">Canada</string>
+    <string name="china">Cina</string>
+    <string name="colombia">Colombia</string>
+    <string name="cuba">Cuba</string>
+    <string name="czech_republic">Repubblica Ceca</string>
+    <string name="egypt">Egitto</string>
     <string name="france">Francia</string>
     <string name="germany">Germania</string>
+    <string name="greece">Grecia</string>
+    <string name="hong_kong">Hong Kong</string>
+    <string name="hungary">Ungheria</string>
+    <string name="india">India</string>
+    <string name="indonesia">Indonesia</string>
+    <string name="ireland">Irlanda</string>
+    <string name="israel">Israele</string>
     <string name="italy">Italia</string>
+    <string name="japan">Giappone</string>
+    <string name="latvia">Lettonia</string>
+    <string name="lithuania">Lituania</string>
+    <string name="malaysia">Malesia</string>
+    <string name="mexico">Messico</string>
+    <string name="morocco">Marocco</string>
+    <string name="netherlands">Olanda</string>
+    <string name="new_zealand">Nuova Zelanda</string>
+    <string name="nigeria">Nigeria</string>
+    <string name="norway">Norvegia</string>
+    <string name="philippines">Filippine</string>
+    <string name="poland">Polonia</string>
+    <string name="portugal">Portogallo</string>
+    <string name="romania">Romania</string>
+    <string name="russia">Russia</string>
+    <string name="saudi_arabia">Arabia Saudita</string>
+    <string name="serbia">Serbia</string>
+    <string name="singapore">Sngapore</string>
+    <string name="slovakia">Slovacchia</string>
+    <string name="slovenia">Slovenia</string>
+    <string name="south_africa">Sud Africa</string>
+    <string name="south_korea">Corea del Sud</string>
+    <string name="sweden">Svezia</string>
+    <string name="switzerland">Svizzera</string>
+    <string name="taiwan">Taiwan</string>
+    <string name="thailand">Tailandia</string>
+    <string name="turkey">Turchia</string>
+    <string name="united_arab_emirates">Emirati Arabi Uniti</string>
+    <string name="ukraine">Ucraina</string>
     <string name="united_kingdom">Regno Unito</string>
     <string name="united_states">Stati Uniti</string>
+    <string name="venezuela">Venezuela</string>
 
     <string-array name="country_array">
+        <item>@string/argentina</item>
+        <item>@string/australia</item>
+        <item>@string/austria</item>
+        <item>@string/belgium</item>
+        <item>@string/brazil</item>
+        <item>@string/bulgaria</item>
+        <item>@string/canada</item>
+        <item>@string/china</item>
+        <item>@string/colombia</item>
+        <item>@string/cuba</item>
+        <item>@string/czech_republic</item>
+        <item>@string/egypt</item>
         <item>@string/france</item>
         <item>@string/germany</item>
+        <item>@string/greece</item>
+        <item>@string/hong_kong</item>
+        <item>@string/hungary</item>
+        <item>@string/india</item>
+        <item>@string/indonesia</item>
+        <item>@string/ireland</item>
+        <item>@string/israel</item>
         <item>@string/italy</item>
+        <item>@string/japan</item>
+        <item>@string/latvia</item>
+        <item>@string/lithuania</item>
+        <item>@string/malaysia</item>
+        <item>@string/mexico</item>
+        <item>@string/morocco</item>
+        <item>@string/netherlands</item>
+        <item>@string/new_zealand</item>
+        <item>@string/nigeria</item>
+        <item>@string/norway</item>
+        <item>@string/philippines</item>
+        <item>@string/poland</item>
+        <item>@string/portugal</item>
+        <item>@string/romania</item>
+        <item>@string/russia</item>
+        <item>@string/saudi_arabia</item>
+        <item>@string/serbia</item>
+        <item>@string/singapore</item>
+        <item>@string/slovakia</item>
+        <item>@string/slovenia</item>
+        <item>@string/south_africa</item>
+        <item>@string/south_korea</item>
+        <item>@string/sweden</item>
+        <item>@string/switzerland</item>
+        <item>@string/taiwan</item>
+        <item>@string/thailand</item>
+        <item>@string/turkey</item>
+        <item>@string/united_arab_emirates</item>
+        <item>@string/ukraine</item>
         <item>@string/united_kingdom</item>
         <item>@string/united_states</item>
+        <item>@string/venezuela</item>
     </string-array>
 
     <string name="business">Business</string>
@@ -28,4 +126,11 @@
     <string name="next">Avanti</string>
     <string name="alert_text_country_of_interest">Scegli almeno una nazione di interesse</string>
     <string name="alert_text_topic_of_interest">Scegli almeno un argomento di interesse</string>
+
+    <string name="country_news">News per Nazione</string>
+    <string name="topic_news">News per Argomento</string>
+    <string name="favorites">Preferiti</string>
+
+    <string name="delete_all">Elimina tuttto</string>
+
 </resources>
