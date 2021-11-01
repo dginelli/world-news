@@ -1,4 +1,4 @@
-package it.unimib.worldnews;
+package it.unimib.worldnews.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;

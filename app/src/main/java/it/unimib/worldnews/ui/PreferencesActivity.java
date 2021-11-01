@@ -1,4 +1,4 @@
-package it.unimib.worldnews;
+package it.unimib.worldnews.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,12 +16,14 @@ import com.google.android.material.snackbar.Snackbar;
 import java.util.HashSet;
 import java.util.Set;
 
+import it.unimib.worldnews.R;
+import it.unimib.worldnews.model.News;
 import it.unimib.worldnews.utils.Constants;
 
 /**
  * Activity that allows the user to choose the country and the topics of interest.
  */
-public class MainActivity extends AppCompatActivity {
+public class PreferencesActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
     private static final String BUTTON_PRESSED_COUNTER_KEY = "ButtonPressedCounterKey";
@@ -43,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_constraint_layout);
+        setContentView(R.layout.activity_preferences_constraint_layout);
 
         mSpinnerCountries = findViewById(R.id.spinner_countries);
 
