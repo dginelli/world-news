@@ -30,7 +30,7 @@
         <item name="postSplashScreenTheme">@style/Theme.WorldNews</item>  # Required.
     </style> -->
 
-    <style name="LauncherTheme" parent="Theme.AppCompat.NoActionBar">
+    <style name="LaunchTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@drawable/background_launch_screen_activity</item>
     </style>
 

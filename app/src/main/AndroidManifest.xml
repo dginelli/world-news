@@ -12,11 +12,10 @@
         <activity
             android:name=".ui.LaunchScreenActivity"
             android:exported="true"
-            android:theme="@style/LauncherTheme"
+            android:theme="@style/LaunchTheme"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
