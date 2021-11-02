@@ -25,6 +25,7 @@ public class NewsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
+        // Logic to intercept the Intent and its data
         Intent intent = getIntent();
         int buttonPressedCounter = intent.getIntExtra(PreferencesActivity.EXTRA_BUTTON_PRESSED_COUNTER_KEY, 0);
         News news = intent.getParcelableExtra(PreferencesActivity.EXTRA_NEWS_KEY);
@@ -38,10 +39,16 @@ public class NewsActivity extends AppCompatActivity {
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.country_news, R.id.topic_news, R.id.favorites).build();
 
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_view);
+
+        // Logic to manage the behavior of the BottomNavigationView and Toolbar
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_container_view);
         NavController navController = navHostFragment.getNavController();
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_view);
+
+        // For the Toolbar
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+
+        // For the BottomNavigationView
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
     }
 }

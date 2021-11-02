@@ -16,6 +16,9 @@ import android.view.ViewGroup;
 
 import it.unimib.worldnews.R;
 
+/**
+ * It shows the favorite news.
+ */
 public class FavoriteNewsFragment extends Fragment {
 
     private static final String TAG = "FavoriteNewsFragment";
@@ -28,6 +31,7 @@ public class FavoriteNewsFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // It is necessary to specify that the toolbar has a custom menu
         setHasOptionsMenu(true);
     }
 
@@ -40,12 +44,14 @@ public class FavoriteNewsFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        // The custom menu that we want to add to the toolbar
         inflater.inflate(R.menu.favorite_menu, menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
+        // Listener for rhe items in the custom menu
         if (item.getItemId() == R.id.delete_all) {
             Log.d(TAG, "onOptionsItemSelected: " + item);
             return true;

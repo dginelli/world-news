@@ -10,6 +10,9 @@ import android.view.ViewGroup;
 
 import it.unimib.worldnews.R;
 
+/**
+ * It shows the news by topic.
+ */
 public class TopicNewsFragment extends Fragment {
 
     public TopicNewsFragment() {

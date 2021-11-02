@@ -10,6 +10,9 @@ import android.view.ViewGroup;
 
 import it.unimib.worldnews.R;
 
+/**
+ * It shows the news by country.
+ */
 public class CountryNewsFragment extends Fragment {
 
     public CountryNewsFragment() {

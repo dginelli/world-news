@@ -88,6 +88,7 @@ public class PreferencesActivity extends AppCompatActivity {
 
                 saveInformation();
 
+                // It creates a new explicit Intent to start and pass the data to NewsActivity
                 Intent intent = new Intent(this, NewsActivity.class);
                 intent.putExtra(EXTRA_BUTTON_PRESSED_COUNTER_KEY, mButtonPressedCounter);
                 intent.putExtra(EXTRA_NEWS_KEY, mNews);
