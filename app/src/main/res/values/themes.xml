@@ -15,7 +15,8 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+    <!-- Theme based on the new SplashScreen API (see https://developer.android.com/guide/topics/ui/splash-screen)
+        <style name="Theme.App.Starting" parent="Theme.SplashScreen">
         // Set the splash screen background, animated icon, and animation duration.
         <item name="windowSplashScreenBackground">@color/purple_500</item>
 
@@ -27,6 +28,10 @@
 
         // Set the theme of the Activity that directly follows your splash screen.
         <item name="postSplashScreenTheme">@style/Theme.WorldNews</item>  # Required.
+    </style> -->
+
+    <style name="LauncherTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_launch_screen_activity</item>
     </style>
 
     <!--<style name="CustomButtonTheme" parent="Widget.AppCompat.Button">
