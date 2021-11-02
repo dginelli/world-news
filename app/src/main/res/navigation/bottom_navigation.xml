@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_nav"
+    app:startDestination="@id/country_news">
+
+    <fragment
+        android:id="@+id/country_news"
+        android:name="it.unimib.worldnews.ui.CountryNewsFragment"
+        android:label="@string/country_news"
+        tools:layout="@layout/fragment_country_news" />
+    <fragment
+        android:id="@+id/topic_news"
+        android:name="it.unimib.worldnews.ui.TopicNewsFragment"
+        android:label="@string/topic_news"
+        tools:layout="@layout/fragment_topic_news" />
+    <fragment
+        android:id="@+id/favorites"
+        android:name="it.unimib.worldnews.ui.FavoriteNewsFragment"
+        android:label="@string/favorites"
+        tools:layout="@layout/fragment_favorite_news" />
+</navigation>

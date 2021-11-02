@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/country_news"
+        android:enabled="true"
+        android:icon="@drawable/ic_country_news"
+        android:title="@string/country_news"/>
+    <item
+        android:id="@+id/topic_news"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_whatshot_24"
+        android:title="@string/topic_news"/>
+    <item
+        android:id="@+id/favorites"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="@string/favorites"/>
+</menu>

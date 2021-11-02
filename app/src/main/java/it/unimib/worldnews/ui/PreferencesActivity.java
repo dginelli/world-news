@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,11 +24,14 @@ import it.unimib.worldnews.utils.Constants;
 /**
  * Activity that allows the user to choose the country and the topics of interest.
  */
-public class MainActivity extends AppCompatActivity {
+public class PreferencesActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
     private static final String BUTTON_PRESSED_COUNTER_KEY = "ButtonPressedCounterKey";
     private static final String NEWS_KEY = "NewsKey";
+
+    public static final String EXTRA_BUTTON_PRESSED_COUNTER_KEY = "it.unimib.worldnews.BUTTON_PRESSED_COUNTER_KEY";
+    public static final String EXTRA_NEWS_KEY = "it.unimib.worldnews.NEWS_KEY";
 
     private int mButtonPressedCounter;
     private News mNews;
@@ -45,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_constraint_layout);
+        setContentView(R.layout.activity_preferences_constraint_layout);
 
         mSpinnerCountries = findViewById(R.id.spinner_countries);
 
@@ -83,6 +87,11 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 saveInformation();
+
+                Intent intent = new Intent(this, NewsActivity.class);
+                intent.putExtra(EXTRA_BUTTON_PRESSED_COUNTER_KEY, mButtonPressedCounter);
+                intent.putExtra(EXTRA_NEWS_KEY, mNews);
+                startActivity(intent);
             }
         });
     }

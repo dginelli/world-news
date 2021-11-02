@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/launchScreenActivity">
+
+    <activity
+        android:id="@+id/launchScreenActivity"
+        android:name="it.unimib.worldnews.ui.LaunchScreenActivity"
+        android:label="activity_launch_screen"
+        tools:layout="@layout/activity_launch_screen" />
+    <activity
+        android:id="@+id/newsActivity"
+        android:name="it.unimib.worldnews.ui.NewsActivity"
+        android:label="activity_news"
+        tools:layout="@layout/activity_news" />
+    <activity
+        android:id="@+id/preferencesActivity"
+        android:name="it.unimib.worldnews.ui.PreferencesActivity"
+        android:label="activity_preferences_linear_layout"
+        tools:layout="@layout/activity_preferences_linear_layout" />
+    <action
+        android:id="@+id/action_from_launchScreenActivity_to_newsActivity"
+        app:destination="@id/newsActivity" />
+    <action
+        android:id="@+id/action_from_launchScreenActivity_to_preferencesActivity"
+        app:destination="@id/preferencesActivity" />
+</navigation>
