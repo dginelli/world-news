@@ -9,7 +9,7 @@
         android:id="@+id/country_news"
         android:name="it.unimib.worldnews.ui.CountryNewsFragment"
         android:label="@string/country_news"
-        tools:layout="@layout/fragment_country_news" />
+        tools:layout="@layout/fragment_country_news_listview" />
     <fragment
         android:id="@+id/topic_news"
         android:name="it.unimib.worldnews.ui.TopicNewsFragment"

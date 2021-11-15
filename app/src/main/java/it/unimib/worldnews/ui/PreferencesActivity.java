@@ -66,7 +66,8 @@ public class PreferencesActivity extends AppCompatActivity {
             mNews = savedInstanceState.getParcelable(NEWS_KEY);
         } else {
             mButtonPressedCounter = 0;
-            mNews = new News("Default title", "Default source");
+            mNews = new News(null, null, "Default title",
+                    null, null, null, null, null);
         }
 
         Log.d(TAG, "onCreate: The button has been pressed " + mButtonPressedCounter + " times");
@@ -83,7 +84,6 @@ public class PreferencesActivity extends AppCompatActivity {
 
                 if (mButtonPressedCounter > 3) {
                     mNews.setTitle("The button has been pressed " + mButtonPressedCounter + " times");
-                    mNews.setSource("Corriere della Sera");
                 }
 
                 saveInformation();

@@ -9,8 +9,8 @@ android {
         applicationId "it.unimib.worldnews"
         minSdk 16
         targetSdk 31
-        versionCode 3
-        versionName "0.0.3"
+        versionCode 4
+        versionName "0.0.4"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -50,4 +50,6 @@ dependencies {
     androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
 
     // implementation 'androidx.core:core-splashscreen:1.0.0-alpha02'
+
+    implementation 'com.google.code.gson:gson:2.8.9'
 }
