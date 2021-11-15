@@ -19,6 +19,7 @@ import java.util.Set;
 
 import it.unimib.worldnews.R;
 import it.unimib.worldnews.model.News;
+import it.unimib.worldnews.model.NewsSource;
 import it.unimib.worldnews.utils.Constants;
 
 /**
@@ -84,6 +85,7 @@ public class PreferencesActivity extends AppCompatActivity {
 
                 if (mButtonPressedCounter > 3) {
                     mNews.setTitle("The button has been pressed " + mButtonPressedCounter + " times");
+                    mNews.setNewsSource(new NewsSource("Corriere della Sera"));
                 }
 
                 saveInformation();
