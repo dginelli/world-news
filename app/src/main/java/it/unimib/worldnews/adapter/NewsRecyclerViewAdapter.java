@@ -13,8 +13,12 @@ import java.util.List;
 import it.unimib.worldnews.R;
 import it.unimib.worldnews.model.News;
 
+/**
+ * RecyclerView Adapter to show the news in a RecyclerView
+ */
 public class NewsRecyclerViewAdapter extends RecyclerView.Adapter<NewsRecyclerViewAdapter.NewsViewHolder> {
 
+    // To detect a click on the RecyclerView items
     public interface OnItemClickListener {
         void onItemClick(News news);
     }

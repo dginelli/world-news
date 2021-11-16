@@ -2,6 +2,11 @@ package it.unimib.worldnews.model;
 
 import java.util.List;
 
+/**
+ * It is the response associated with the JSON received
+ * by the following endpoint:
+ * https://newsapi.org/docs/endpoints/top-headlines
+ */
 public class NewsResponse {
     private String status;
     private int totalResults;

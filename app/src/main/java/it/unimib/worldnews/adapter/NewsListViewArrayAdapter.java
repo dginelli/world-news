@@ -13,6 +13,9 @@ import androidx.annotation.Nullable;
 import it.unimib.worldnews.R;
 import it.unimib.worldnews.model.News;
 
+/**
+ * Custom Adapter that extends ArrayAdapter to show the news in a ListView.
+ */
 public class NewsListViewArrayAdapter extends ArrayAdapter<News> {
 
     private News[] mArrayNews;

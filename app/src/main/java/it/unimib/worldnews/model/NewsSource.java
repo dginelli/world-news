@@ -3,6 +3,11 @@ package it.unimib.worldnews.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+/**
+ * It is the source of an article contained in the JSON response
+ * received by the following endpoint:
+ * https://newsapi.org/docs/endpoints/top-headlines
+ */
 public class NewsSource implements Parcelable {
     private String name;
 

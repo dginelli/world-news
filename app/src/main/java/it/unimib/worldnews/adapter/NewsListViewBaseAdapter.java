@@ -14,6 +14,9 @@ import java.util.List;
 import it.unimib.worldnews.R;
 import it.unimib.worldnews.model.News;
 
+/**
+ * Custom Adapter that extends BaseAdapter to show the news in a ListView.
+ */
 public class NewsListViewBaseAdapter extends BaseAdapter {
 
     private Activity mActivity;

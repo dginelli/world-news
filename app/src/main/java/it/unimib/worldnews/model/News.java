@@ -5,6 +5,11 @@ import android.os.Parcelable;
 
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * It is an article contained in the JSON response
+ * received by the following endpoint:
+ * https://newsapi.org/docs/endpoints/top-headlines
+ */
 public class News implements Parcelable {
 
     @SerializedName("source")
