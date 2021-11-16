@@ -5,223 +5,15 @@
         {
             "source": {
                 "id": null,
-                "name": "Liberoquotidiano.it"
-            },
-            "author": "@libero_official",
-            "title": "Cancro, l'alimento che favorisce le metastasi (per sempre): cosa non devi mai mangiare - LiberoQuotidiano.it",
-            "description": "Una scoperta che potrebbe cambiare in meglio  la lotta contro il cancro . Una scoperta che riguarda l' acido palmitico , uno dei più comuni...",
-            "url": "https://www.liberoquotidiano.it/news/scienze-tech/alimentazione-e-benessere/29459757/cancro-acido-palmitico-alimento-favorisce-metastasi-ricerca-nature.html",
-            "urlToImage": "https://img2.liberoquotidiano.it/images/2021/11/15/174956783-2f3bfff6-201e-4369-a1fb-35c2ccd6bb44.jpg",
-            "publishedAt": "2021-11-15T17:47:00Z",
-            "content": "Una scoperta che potrebbe cambiare in meglio la lotta contro il cancro. Una scoperta che riguarda l'acido palmitico, uno dei più comuni grassi saturi alimentari, che si sa già essere dannoso per i va… [+1821 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Ilfattoquotidiano.it"
-            },
-            "author": "F. Q.",
-            "title": "Covid, il governo annuncia di nuovo i controllori su bus. Verifica a terra dei Green pass solo… - Il Fatto Quotidiano",
-            "description": "L’ordinanza di ministero della Salute e ministero delle Infrastrutture: il controllo del certificato verde \"è preferibile sia svolto a terra nelle stazioni\" (in particolare quelle con gate all'ingresso). Il ritorno dei controllori era già stato annunciato dal…",
-            "url": "https://www.ilfattoquotidiano.it/2021/11/15/covid-il-governo-annuncia-di-nuovo-i-controllori-su-bus-verifica-a-terra-dei-green-pass-solo-preferibile-ma-si-a-stop-treno-con-un-caso-sospetto/6393023/",
-            "urlToImage": "https://st.ilfattoquotidiano.it/wp-content/uploads/2021/11/15/metro.jpg",
-            "publishedAt": "2021-11-15T17:37:30Z",
-            "content": "Il controllo del Green pass prima di salire a bordo resta “preferibile” e comunque il riferimento è netto solo alle grandi stazioni con gate di accesso ai binari. Il ritorno dei controllori sui mezzi… [+5998 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Corriere.it"
-            },
-            "author": "Gaia Piccardi, inviata a Torino",
-            "title": "Berrettini infortunato alle Atp Finals di Torino: non si allena ma resta nel programma. Deciderà all’ultimo - Corriere della Sera",
-            "description": "Giornata di visite e di riposo per Matteo, che non ha ancora preso una decisione ufficiale: il problema agli addominali sembra meno grave di quello di Melbourne. La riserva Sinner rimane in preallarme per prendere il suo posto nel match con Hurkacz martedì al…",
-            "url": "https://www.corriere.it/sport/21_novembre_15/berrettini-infortunato-atp-finals-torino-non-si-allena-ma-resta-programma-decidera-all-ultimo-db47cbee-462f-11ec-9a24-28e7c2e627b2.shtml",
-            "urlToImage": "https://images2.corriereobjects.it/methode_image/socialshare/2021/11/15/c3afffbe-4630-11ec-9a24-28e7c2e627b2.jpg",
-            "publishedAt": "2021-11-15T16:41:48Z",
-            "content": "di Gaia Piccardi, inviata a TorinoGiornata di visite e di riposo per Matteo, che non ha ancora preso una decisione ufficiale: il problema agli addominali sembra meno grave di quello di Melbourne. La … [+1966 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Ilfattoquotidiano.it"
-            },
-            "author": "F. Q.",
-            "title": "Esplosione a Liverpool, si indaga per terrorismo. Comitato Cobra alza l’allerta in Uk: “Attacchi… - Il Fatto Quotidiano",
-            "description": "Ieri un taxi è esploso davanti al Women Hospital provocando la morte dell'attentatore, a bordo della vettura come passeggero, e il ferimento dell'autista che è riuscito a uscire dal mezzo in tempo e a bloccare il kamikaze all'interno. Si tratta del secondo ep…",
-            "url": "https://www.ilfattoquotidiano.it/2021/11/15/esplosione-a-liverpool-si-indaga-per-terrorismo-comitato-cobra-alza-lallerta-in-uk-attacchi-altamente-probabili/6392358/",
-            "urlToImage": "https://st.ilfattoquotidiano.it/wp-content/uploads/2021/11/15/Police_1200.jpg",
-            "publishedAt": "2021-11-15T16:41:15Z",
-            "content": "Allerta terrorismo in Regno Unito, dopo che ieri un taxi è esploso davanti al Women Hospital provocando la morte dell’attentatore, a bordo della vettura come passeggero, e il ferimento dell’autista c… [+3700 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Liberoquotidiano.it"
-            },
-            "author": "@libero_official",
-            "title": "Bollettino 15 novembre, schizza il tasso di positività. Contagi, +192% tra gli operatori sanitari: gli ospedali non sono sicuri? - Liberoquotidiano.it",
-            "description": "La situazione epidemiologica dell’Italia continua a rimanere sotto controllo, anche se tutti i dati sono in crescita e invitano alla prudenza da...",
-            "url": "https://www.liberoquotidiano.it/news/italia/29458481/bollettino-15-novembre-schizza-tasso-positivita-contagi-operatori-sanitari-ospedali-non-sicuri.html",
-            "urlToImage": "https://img2.liberoquotidiano.it/images/2021/11/15/163020623-fb755fa5-310c-4915-bb48-a8eab7e221b5.jpg",
-            "publishedAt": "2021-11-15T16:25:00Z",
-            "content": "La situazione epidemiologica dell’Italia continua a rimanere sotto controllo, anche se tutti i dati sono in crescita e invitano alla prudenza da qui a Natale, quando poi si capirà davvero se avremo s… [+1339 chars]"
-        },
-        {
-            "source": {
-                "id": null,
                 "name": "Ilpost.it"
             },
             "author": null,
-            "title": "Il sorprendente risultato delle elezioni in Bulgaria - Il Post",
-            "description": "Sono state vinte da un partito fondato pochi mesi fa da due economisti, che ora proverà a formare un governo",
-            "url": "https://www.ilpost.it/2021/11/15/bulgaria-elezioni-risultato/",
-            "urlToImage": "https://www.ilpost.it/wp-content/uploads/2021/11/AP21318826670505.jpg",
-            "publishedAt": "2021-11-15T16:04:07Z",
-            "content": "Le elezioni parlamentari in Bulgaria, che si sono tenute domenica 14 novembre, sono state vinte a sorpresa da “Noi continuiamo il cambiamento”, un partito anti corruzione fondato da due economisti, c… [+3206 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Liberoquotidiano.it"
-            },
-            "author": "Francesco Fredella",
-            "title": "Ballando, Morgan vuole rovinare Selvaggia Lucarelli: \"Il gesto vergognoso per cui la ho querelata\", caos in Rai - LiberoQuotidiano.it",
-            "description": "Non mancano le fibrillazioni in Rai. Ad  Oggi è un altro giorno , il programma di  Serena Bortone  in onda su Rai 1, arriva  Morgan ,&nbsp...",
-            "url": "https://www.liberoquotidiano.it/news/reality-talent/29458025/ballando-con-le-stelle-morgan-querela-selvaggia-lucarelli-sms-pubblicati-oggi-e-un-altro-giorno.html",
-            "urlToImage": "https://img2.liberoquotidiano.it/images/2021/11/15/160738280-d27568a3-1dcd-4a21-9013-64d119355f56.jpg",
-            "publishedAt": "2021-11-15T16:04:00Z",
-            "content": "Non mancano le fibrillazioni in Rai. Ad Oggi è un altro giorno, il programma di Serena Bortone in onda su Rai 1, arriva Morgan, che è uno dei concorrenti di Ballando con le stelle (e che insieme ad A… [+2578 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Corriere.it"
-            },
-            "author": "Giulio De Santis",
-            "title": "Bonus casa, cessione e sconto in fattura: riattivata la piattaforma per le comunicazioni - Corriere della Sera",
-            "description": "Indagata per tentata estorsione una sessantenne. Per lei il pubblico ministero ha chiesto il rinvio a giudizio. La vittima era il suo ex avvocato",
-            "url": "https://roma.corriere.it/notizie/cronaca/21_novembre_15/tenta-ricatto-centomila-euro-o-dico-tua-moglie-noi-due-1ea16950-4580-11ec-9904-ef3b86729896.shtml",
-            "urlToImage": "https://images2-roma.corriereobjects.it/methode_image/socialshare/2021/11/14/fbecd074-4580-11ec-9904-ef3b86729896.jpg",
-            "publishedAt": "2021-11-15T16:00:28Z",
-            "content": "«Mi dai 100mila euro o dico a tua moglie che abbiamo avuto una relazione. Comunque, mi accontento anche di 50mila...». È la sintesi degli sms che, secondo la Procura, avrebbe inviato Concetta Lucigna… [+1373 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Corriere.it"
-            },
-            "author": "Giuseppe Sarcina",
-            "title": "Attacco a Capitol Hill, Steve Bannon si consegna all’Fbi - Corriere della Sera",
-            "description": "Oggi in tribunale per oltraggio al Congresso",
-            "url": "https://www.corriere.it/esteri/21_novembre_15/attacco-capitol-hill-steve-bannon-si-consegna-all-fbi-7182bd78-4624-11ec-9a24-28e7c2e627b2.shtml",
-            "urlToImage": "https://images2.corriereobjects.it/methode_image/socialshare/2021/11/15/c5e72606-4624-11ec-9a24-28e7c2e627b2.jpg",
-            "publishedAt": "2021-11-15T15:15:44Z",
-            "content": "di Giuseppe Sarcina L’ex stratega di Trump si è presentato agli uffici dei Federali a Washington. In tribunale risponderà di due capi di imputazione: non aver testimoniato e non aver consegnato i doc… [+2592 chars]"
-        },
-        {
-            "source": {
-                "id": "la-repubblica",
-                "name": "La Repubblica"
-            },
-            "author": "Repubblica.it",
-            "title": "Genoa, Preziosi lascia: il medico di Berlusconi Alberto Zangrillo nuovo presidente - La Repubblica",
-            "description": "Davanti a un notaio milanese il passaggio definitivo della società rossoblù alla holding \"777 Partners\"",
-            "url": "https://genova.repubblica.it/sport/2021/11/15/news/genoa_affare_fatto_zangrillo_nuovo_presidente-326476691/",
-            "urlToImage": "https://www.repstatic.it/content/localirep/img/rep-genova/2021/11/15/183720299-c95a2944-7f61-404e-ae89-cc7c96e8aeb6.jpg",
-            "publishedAt": "2021-11-15T14:27:00Z",
-            "content": "Sono arrivate anche le firme dal notaio e oggi il Genoa è ufficialmente di proprietà della Holding americana 777 Partners. Nel pomeriggio davanti ad un notaio milanese l'ex patron Enrico Preziosi e i… [+1415 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Mediaset.it"
-            },
-            "author": null,
-            "title": "Covid, in due mesi i casi tra gli operatori sanitari aumentati del 192% - TGCOM",
-            "description": "Secondo alcune fonti, in settimana dovrebbe andare in Consiglio dei ministri l'obbligo della terza dose per il vaccino anti-Covid al personale sanitario",
-            "url": "https://www.tgcom24.mediaset.it/cronaca/covid-in-due-mesi-i-casi-tra-operatori-sanitari-aumentati-del-192-_41637205-202102k.shtml",
-            "urlToImage": "https://img-prod.tgcom24.mediaset.it/images/2021/11/15/135430748-a42e4bad-e3e7-4428-9a79-c33a66cdbbe3.jpg",
-            "publishedAt": "2021-11-15T14:15:42Z",
-            "content": "Fonti: verso Cdm in settimana per obbligo terza dose a sanitari Intanto, secondo quanto riferiscono alcune fonti, dovrebbe andare in Consiglio dei ministri questa settimana l'obbligo della terza dose… [+259 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Ilgiornale.it"
-            },
-            "author": "Federico Garau",
-            "title": "\"Non possono pagare i vaccinati. Noi a un passo dalla zona gialla\" - ilGiornale.it",
-            "description": "Il presidente del Fvg e della Conferenza delle Regioni commenta la situazione attuale del territorio da lui amministrato, e annuncia la zona gialla. Sulla stessa linea Massimo Galli: \"Grave che chi si è vaccinato sia danneggiato da scelte né responsabili né g…",
-            "url": "https://www.ilgiornale.it/news/politica/fedriga-fvg-giallo-i-vaccini-si-torna-parlare-colori-1989268.html",
-            "urlToImage": "https://img.ilgcdn.com/sites/default/files/styles/social/public/foto/2021/04/23/1619152149-agenzia-fotogramma-ipa22357960.jpg?_=1619152149",
-            "publishedAt": "2021-11-15T13:56:00Z",
-            "content": "Com'era prevedibile, si torna a parlare di Italia a colori, con il governatore del Friuli Venezia Giulia Massimiliano Fedriga che paventa la zona gialla per la sua Regione. Commentando infatti la sit… [+3212 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Iltempo.it"
-            },
-            "author": "Il Tempo",
-            "title": "Covid, ecco le Regioni che rischiano la zona gialla. E spuntano i lockdown per chi non è vaccinato - Il Tempo",
-            "description": "Crescono i contagi e la mappa dei colori dell'Italia che esprime le restrizioni per il Covid-19 potrebbe cambiare presto. A essere più...",
-            "url": "https://www.iltempo.it/attualita/2021/11/15/news/covid-ecco-le-regioni-che-rischiano-la-zona-gialla-e-spuntano-i-lockdown-per-chi-non-e-vaccinato-29455407/",
-            "urlToImage": "https://img.iltempo.it/images/2021/11/15/140739794-77f75ecb-c10a-4879-9434-32e12046acc6.jpg",
-            "publishedAt": "2021-11-15T13:50:00Z",
-            "content": "Crescono i contagi e la mappa dei colori dell'Italia che esprime le restrizioni per il Covid-19 potrebbe cambiare presto. A essere più preoccupate sono le regioni del nord. \"Il dato concreto è che cr… [+2699 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Gazzetta.it"
-            },
-            "author": "Gasport",
-            "title": "Irlanda del Nord-Italia, probabili formazioni: Mancini lancia Tonali e Berardi dal 1' - La Gazzetta dello Sport",
-            "description": "Calcio d'inizio alle ore 20.45. Partita cruciale per gli azzurri di Mancini: o la qualificazione arriva questa sera oppure ci toccheranno ancora i playoff",
-            "url": "https://www.gazzetta.it/Calcio/Nazionale/15-11-2021/irlanda-nord-italia-diretta-qualificazioni-mondiali-risultato-live-4202402430781.shtml",
-            "urlToImage": "https://images2.gazzettaobjects.it/methode_image/2021/11/14/Calcio/Foto_Calcio_-_Trattate/771809a3f5b7a122a6f855da495237a8_1200x675.JPG?v=202111151517",
-            "publishedAt": "2021-11-15T13:20:00Z",
-            "content": "4-4-2: Peacock-Farrell, Catchart, Evans, Mcnair; Lewis, Saville, S. Davis, Mccan, Dallas; Washington, Magennis."
-        },
-        {
-            "source": {
-                "id": "ansa",
-                "name": "ANSA.it"
-            },
-            "author": "",
-            "title": "Due operai morti in poche ore per incidenti sul lavoro - Agenzia ANSA",
-            "description": "Uno è caduto dal mezzo schiacciasassi che stava guidando in un cantiere nel Fiorentino e l'altro è\r\nprecipitato mentre ispezionava una canna fumaria, in un'abitazione in provincia di Salerno (ANSA)",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2021/11/15/si-ribalta-con-schiacciasassi-operaio-muore-nel-fiorentino_198a4a49-4c29-42e2-a863-69cd5805b2ab.html",
-            "urlToImage": "https://www.ansa.it/webimages/img_700/2021/11/3/5914f307eaabf97e6d7cc63fbf54dbb3.jpg",
-            "publishedAt": "2021-11-15T13:11:00Z",
-            "content": "Incidente mortale sul lavoro alle 12 di oggi a Cerreto Guidi, nel Fiorentino in un cantiere per la realizzazione di un collettore fognario nei pressi del depuratore. La vittima è un operaio di 51 ann… [+891 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Corriere.it"
-            },
-            "author": "Alessandro Fulloni",
-            "title": "Maltempo, ancora danni: a Cagliari «calamità naturale», nevicate in Piemonte, traghetti bloccati all’Elba - Corriere della Sera",
-            "description": "Colpita nuovamente la Sardegna. : terreni sott’acqua, coltivazioni distrutte, interi frane e smottamenti. In Campania allerta gialla «per rischio idrogeologico». Disagi al Nord",
-            "url": "https://www.corriere.it/cronache/21_novembre_15/maltempo-ancora-danni-cagliari-calamita-naturale-nevicate-piemonte-traghetti-bloccati-all-elba-8e65bca2-460f-11ec-9a24-28e7c2e627b2.shtml",
-            "urlToImage": "https://images2.corriereobjects.it/methode_image/socialshare/2021/11/15/cf328bfc-4614-11ec-9a24-28e7c2e627b2.jpg",
-            "publishedAt": "2021-11-15T13:10:14Z",
-            "content": "di Alessandro FulloniColpita nuovamente la Sardegna. : terreni sott’acqua, coltivazioni distrutte, interi frane e smottamenti. In Campania allerta gialla «per rischio idrogeologico». Disagi al Nord \r… [+3024 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Adnkronos.com"
-            },
-            "author": "grossi",
-            "title": "Terza dose vaccino, Palù: \"Altissima efficacia contro infezione\" - Adnkronos",
-            "description": "'Questo booster dovrebbe tenerci buoni almeno per un anno'",
-            "url": "https://www.adnkronos.com/terza-dose-vaccino-palu-altissima-efficacia-contro-infezione_67Zx6Ad7ZYOv2OWQ2WpmCx",
-            "urlToImage": "https://www.adnkronos.com/resources/026f-13ba646993a4-a05cde464eec-1000/palu_fi.jpg",
-            "publishedAt": "2021-11-15T12:57:00Z",
-            "content": "\"La terza dose di vaccino previene l'infezione con efficacia elevatissima. Sono convinto che questo booster dovrebbe tenerci buoni almeno per un anno\". Giorgio Palù, presidente dell'Aifa, si sofferma… [+1892 chars]"
+            "title": "La Russia ha distrutto un satellite mettendo a rischio gli astronauti in orbita - Il Post",
+            "description": "Il test è stato definito «sconsiderato» e «irresponsabile» dagli Stati Uniti, e ha prodotto migliaia di rifiuti spaziali",
+            "url": "https://www.ilpost.it/2021/11/16/russia-satellite-distrutto-detriti-spaziali-stazione-spaziale-internazionale/",
+            "urlToImage": "https://www.ilpost.it/wp-content/uploads/2021/11/stazione-spaziale-internazionale.jpg",
+            "publishedAt": "2021-11-16T08:06:30Z",
+            "content": "Lunedì 15 novembre la Russia ha condotto un test con unarma antisatellitare (ASAT), distruggendo un satellite russo in orbita, mettendo a rischio gli equipaggi della Stazione spaziale internazionale … [+8713 chars]"
         },
         {
             "source": {
@@ -229,90 +21,38 @@
                 "name": "Multiplayer.it"
             },
             "author": "Giorgio Melani",
-            "title": "GTA Trilogy: modder già al lavoro per migliorare la pioggia e altri aspetti - Multiplayer.it",
-            "description": "GTA Trilogy è già sotto i ferri dei modder che stanno lavorando per per migliorare la pioggia e altri aspetti dei tre giochi, sotto minaccia di azioni legali.",
-            "url": "https://multiplayer.it/notizie/gta-trilogy-modder-gia-al-lavoro-per-migliorare-la-pioggia-e-altri-aspetti.html",
-            "urlToImage": "https://multiplayer.net-cdn.it/thumbs/images/2021/11/05/gta-the-trilogy-the-definitive-edition_6_png_750x400_crop_upscale_q85.jpg",
-            "publishedAt": "2021-11-15T12:36:04Z",
-            "content": "GTA Trilogy ha avuto un lancio a dir poco travagliato, con una lunga serie di problemi tecnici che hanno afflitto la raccolta della Definitive Edition, ma i modder stanno già lavorando per cercare di… [+1622 chars]"
+            "title": "Xbox compie 20 anni, PlayStation si congratula e KFC ovviamente trolla - Multiplayer.it",
+            "description": "In occasione del ventesimo anniversario di Xbox, su Twitter è andato in scena un simpatico siparietto con le congratulazioni di PlayStation e la trollata di KFC.",
+            "url": "https://multiplayer.it/notizie/xbox-compie-20-anni-playstation-si-congratula-e-kfc-ovviamente-trolla.html",
+            "urlToImage": "https://multiplayer.net-cdn.it/thumbs/images/2021/11/16/xbox-celebrates-its-20th-anniversary-and-announces-the-program-until-1024x576_jpeg_750x400_crop_upscale_q85.jpg",
+            "publishedAt": "2021-11-16T07:48:03Z",
+            "content": "Simpatico scambio di cortesie su Twitter tra Xbox e PlayStation, in occasione dell'anniversario di Xbox che è andato in scena ieri per i 20 anni dal lancio della prima console Microsoft, a cui ovviam… [+1380 chars]"
         },
         {
             "source": {
                 "id": null,
                 "name": "Corriere.it"
             },
-            "author": "Marco Vassallo",
-            "title": "Daniel Humm lascia il «Claridge’s». La direzione: «Non possiamo proporre solo piatti vegetali» - Corriere della Sera",
-            "description": "Nelle cucine del ristorante di Mayfair, era già pronto un menù interamente vegetale studiato dallo chef svizzero che dopo il lockdown aveva deciso di convertirsi, ai fornelli, alla filosofia green. Ma la risposta della direzione dell’hotel 5 stelle è stata un…",
-            "url": "https://www.corriere.it/cook/news/21_novembre_15/daniel-humm-lascia-la-direzione-b611a176-460f-11ec-9a24-28e7c2e627b2.shtml",
-            "urlToImage": "https://images2.corriereobjects.it/methode_image/2021/11/15/Cucina/Foto-Cucina-Trattate/daniel-humm-vegano-kIpB--656x492@Corriere-Web-Sezioni-kxCB--526x284@Corriere-Web-Sezioni.jpeg",
-            "publishedAt": "2021-11-15T12:36:00Z",
-            "content": "Dopo la svolta dell’«Eleven Madison Park» di New York, Daniel Humm voleva avviare la sua rivoluzione vegana anche Londra, al «Davies and Brook» del «Claridge’s hotel». Nelle cucine del ristorante di … [+2632 chars]"
+            "author": "Giuliana Ferraino",
+            "title": "Illycaffè, arriva Scocchia: «Mi affascina la sfida della Borsa» - Corriere della Sera",
+            "description": "«A L’Oréal ero l’ad di una filiale, non il vero capoazienda. Con Kiko ho avuto la possibilità di fare il pilota, anche se l’aereo era più piccolo del gruppo francese. Questo cambio mi permette di continuare a crescere»",
+            "url": "https://www.corriere.it/economia/aziende/21_novembre_16/illycaffe-arriva-scocchia-mi-affascina-sfida-borsa-0ce59da2-4644-11ec-9a24-28e7c2e627b2.shtml",
+            "urlToImage": "https://images2.corriereobjects.it/methode_image/socialshare/2021/11/15/63692790-4647-11ec-9a24-28e7c2e627b2.jpg",
+            "publishedAt": "2021-11-16T07:18:58Z",
+            "content": "Alla guida di Illycaffé arriva Cristina Scocchia, 47 anni, che a fine anno lascerà la carica di amministratrice delegata di Kiko, per portare il gruppo del caffè in Borsa. A Kiko, azienda di cosmetic… [+1680 chars]"
         },
         {
             "source": {
                 "id": null,
-                "name": "Eurosport.it"
+                "name": "Open.online"
             },
-            "author": "Eurosport",
-            "title": "Calcio, Playoff Mondiali Qatar 2022: date, regolamento, teste di serie, chi li farà ed eventuali pericoli per l'Italia - Eurosport IT",
-            "description": "QUALIFICAZIONI MONDIALI - Ecco la formula dei playoff, con le possibili avversarie dell'Italia del commissario tecnico Roberto Mancini. I pericoli e perché conv",
-            "url": "https://www.eurosport.it/calcio/qualificazioni-mondiali-europa/2022/calcio-playoff-mondiali-qatar-2022-date-regolamento-teste-di-serie-chi-li-fara-ed-eventuali-pericoli_sto8629239/story.shtml",
-            "urlToImage": "https://i.eurosport.com/2021/11/15/3254527-66607808-2560-1440.jpg",
-            "publishedAt": "2021-11-15T12:14:07Z",
-            "content": "Federico Chiesa, Italia, Getty Images\r\nCredit Foto Getty Images"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Ilfattoquotidiano.it"
-            },
-            "author": "Mauro Del Corno",
-            "title": "Shell saluta l’Olanda, pagherà le tasse in Gran Bretagna. Il governo olandese tenta una soluzione in… - Il Fatto Quotidiano",
-            "description": "Festeggia Londa: \"Segnale di fiducia nell'economia britannica\". Tentativo in extremis del governo olandese per cancellare una tassa del 15% sui dividendi e convincere la quarta compagnia petrolifera al mondo a restare. Shell è tenuta sotto pressione da alcuni…",
-            "url": "https://www.ilfattoquotidiano.it/2021/11/15/shell-saluta-lolanda-paghera-le-tasse-in-gran-bretagna-e-non-si-chiamera-piu-royal-dutch-l-aja-spiacevolmente-sorpresi/6392601/",
-            "urlToImage": "https://st.ilfattoquotidiano.it/wp-content/uploads/2021/11/15/shell_1200-2.jpg",
-            "publishedAt": "2021-11-15T11:48:21Z",
-            "content": "Bye bye Olanda. Il colosso anglo-olandese Royal Dutch Shell, quarta compagnia petrolifera al mondo, sposterà il suo quartier generale a Londra, e la sua residenza fiscale in Gran Bretagna nel quadro … [+2612 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Adnkronos.com"
-            },
-            "author": "mrtrepetto",
-            "title": "\"Finiranno come piazzale Loreto\", reazioni a perquisizioni No vax e No Green pass - Adnkronos",
-            "description": "In Italia 'aumento limitato ma costante. Ci richiama al dovere di osservare le norme di cautela'",
-            "url": "https://www.adnkronos.com/covid-oggi-italia-mattarella-aumento-contagi-affidarsi-a-scienza_2rwRGxApcBzZFg9OZ6jgMZ",
-            "urlToImage": "https://www.adnkronos.com/resources/026f-13a7f8736afb-e63c13fc9a51-1000/mattarella6_fg.jpg",
-            "publishedAt": "2021-11-15T11:23:00Z",
-            "content": "In Italia \"aumento limitato ma costante. Ci richiama al dovere di osservare le norme di cautela\"Sul fronte coronavirus, l'Italia e l'Unione europea stanno \"affrontando un periodo in cui i contagi rip… [+1223 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Rainews.it"
-            },
-            "author": null,
-            "title": "Borrell: \"Oggi nuovo pacchetto sanzioni\". Lukashenko: \"Combatteremo\" - Rai News",
-            "description": "Oggi il Consiglio europeo dei ministri degli esteri con al centro la crisi migranti al confine con la Bielorussia. Nel mirino compagnie aeree, agenzie di viaggio e chiunque sia coinvolto nella spinta dei profughi verso le frontiere Ue. La risposta di Lukashen…",
-            "url": "https://www.rainews.it/dl/rainews/articoli/bielorussia-europa-borrell-sanzioni-migranti-lukashenko-pronti-rimandare-migranti-patria-b5f07f61-f92d-4bc8-8d14-668ca851b641.html",
-            "urlToImage": "https://www.rai.it/cropgd/476x249/dl/img/2021/11/1636532054477.AP21313533131387.jpg",
-            "publishedAt": "2021-11-15T11:03:00Z",
-            "content": "15 novembre 2021Oggi a Bruxelles il Consiglio dei ministri degli esteri. Sul tavolo diversi temi tra cui la crisi al confine tra Bielorussia e Polonia dove sono ammassati migliaia di migranti, profug… [+6732 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Avvenire.it"
-            },
-            "author": "Mimmo Muolo",
-            "title": "Il Papa a Firenze con i vescovi e i sindaci del Mediterraneo per la pace - Avvenire",
-            "description": "La decisione, spiega, è «per favorire che il cambiamento della guida a cui siamo chiamati dal Santo Padre si svolga con la libertà che tale processo richiede»",
-            "url": "https://www.avvenire.it/chiesa/pagine/comunione-e-liberazione-si-dimette-don-julian-carron",
-            "urlToImage": "https://www.avvenire.it/c/2021/PublishingImages/5de1ac79285a400da596d1cd11670938/Julian-Carron.jpg",
-            "publishedAt": "2021-11-15T10:43:05Z",
-            "content": "Ansa\r\nSono state annunciate oggi le dimissioni di don Julián Carrón. Il sacerdote spagnolo, 71 anni, lascia dunque la guida di Comunione e Liberazione, per «favorire come ha spiegato egli stesso in u… [+4978 chars]"
+            "author": "https://www.facebook.com/Opengiornaleonline/",
+            "title": "Austria, come funziona il lockdown per i No vax: «Ogni cittadino deve aspettarsi i controlli» - Open",
+            "description": "Nei bar di Vienna i primi clienti cacciati: «Ma è giusto così. Chi mette in pericolo la salute degli altri deve starsene agli arresti domiciliari»",
+            "url": "https://www.open.online/2021/11/16/covid-19-austria-lockdown-no-vax-controlli/",
+            "urlToImage": "https://static.open.online/wp-content/uploads/2021/11/lockdown-austria-no-vax-come-funziona.jpeg",
+            "publishedAt": "2021-11-16T06:57:00Z",
+            "content": "Nell’Austria che ha varato il lockdown per i non vaccinati la scena che si ripete è sempre la stessa. La racconta oggi un reportage de La Stampa, che parte da un bar di Vienna: un signore mostra un c… [+1578 chars]"
         },
         {
             "source": {
@@ -320,64 +60,363 @@
                 "name": "ANSA.it"
             },
             "author": "",
-            "title": "Lagarde: 'Per calo dell'inflazione più tempo del previsto' - Agenzia ANSA",
-            "description": "La presidente della Bce in audizione al Parlamento europeo: 'La carenza dei materiali industriali\r\ndurerà diversi mesi' (ANSA)",
-            "url": "https://www.ansa.it/sito/notizie/economia/2021/11/15/lagarde-per-calo-dellinflazione-piu-tempo-del-previsto_60927c8b-ad21-451b-ab66-6a911532226e.html",
-            "urlToImage": "https://www.ansa.it/webimages/img_700/2021/11/3/ac45a32d2e1100a3bd6ae6d320aa6e11.jpg",
-            "publishedAt": "2021-11-15T10:33:00Z",
-            "content": "\"Vediamo ancora che l'inflazione si modererà il prossimo anno, ma ci vorrà più tempo di quanto inizialmente previsto\" e \"continuiamo a prevedere che a medio termine rimanga al di sotto del nostro nuo… [+2147 chars]"
+            "title": "'Asta del divorzio' a New York, battute opere per 676 milioni - Ultima Ora - Agenzia ANSA",
+            "description": "Trentacinque dipinti e sculture, tra i quali pezzi di Andy Warhol e Jackson Pollock, è stata battuta\r\nall'asta a New York per 676 milioni di dollari. (ANSA)",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2021/11/16/asta-del-divorzio-a-new-york-battute-opere-per-676-milioni_ec4b9200-f64e-433e-9cdd-5c999a7ccc9b.html",
+            "urlToImage": "https://www.ansa.it/webimages/img_700/2021/11/5/39e8336ecde31c3957c2608340d8a074.jpg",
+            "publishedAt": "2021-11-16T06:53:00Z",
+            "content": "(ANSA) - ROMA, 16 NOV - Trentacinque dipinti e sculture, tra\r\ni quali pezzi di Andy Warhol e Jackson Pollock, è stata battuta\r\nall'asta a New York per 676 milioni di dollari. Lo riporta la\r\nBbc Le op… [+1256 chars]"
         },
         {
             "source": {
                 "id": null,
-                "name": "Ilfattoquotidiano.it"
+                "name": "Lanazione.it"
             },
-            "author": "F. Q.",
-            "title": "Greco (Cts): “Tamponi rapidi sono elemento debole per ottenere il Green Pass, garanzie non paragonabili… - Il Fatto Quotidiano",
-            "description": "L'epidemiologo membro del Comitato tecnico scientifico, in un'intervista al Corriere della Sera, l'epidemiologo spiega che \"vaccino e tampone non sono paragonabili quanto ad affidabilità\" e \"arriverà il momento in cui dovremo porci il problema\". Sul Natale: \"…",
-            "url": "https://www.ilfattoquotidiano.it/2021/11/15/greco-cts-tamponi-rapidi-sono-elemento-debole-per-ottenere-il-green-pass-garanzie-non-paragonabili-con-vaccino-e-molecolare/6392442/",
-            "urlToImage": "https://st.ilfattoquotidiano.it/wp-content/uploads/2021/11/15/Donato-Greco.jpg",
-            "publishedAt": "2021-11-15T10:24:23Z",
-            "content": "Il Green pass ottenuto attraverso il tampone, in particolare quello antigenico rapido, è meno affidabile di quello derivante dalla vaccinazione. E sullo sfondo si intravede la possibilità di una revi… [+2413 chars]"
+            "author": "La Nazione",
+            "title": "'Ndrangheta, maxi blitz all'alba: sequestrata una tonnellata di cocaina - LA NAZIONE",
+            "description": "Oltre 100 le misure cautelari contro presunti appartenenti alla cosca Molè",
+            "url": "https://www.lanazione.it/cronaca/ndrangheta-toscana-1.7040266",
+            "urlToImage": "https://immagini.quotidiano.net/?url=http%3A%2F%2Fp1014p.quotidiano.net%3A80%2Fpolopoly_fs%2F1.4697500.1637044741%21%2FhttpImage%2Fimage.jpg_gen%2Fderivatives%2Fwidescreen%2Fimage.jpg&w=700&h=391",
+            "publishedAt": "2021-11-16T06:40:13Z",
+            "content": "Firenze, 16 novembre 2021 - Un blitz della Polizia è in corso dall'alba di oggi, 16 novembre, in diverse regioni italiane contro presunti appartenenti alla cosca Molè, una delle storiche famiglie di … [+1147 chars]"
         },
         {
             "source": {
                 "id": null,
-                "name": "Ilfattoquotidiano.it"
+                "name": "Corriere.it"
             },
-            "author": "Giuseppe Candela",
-            "title": "Che Tempo che Fa, Lady Gaga: “L’affossamento del DDL Zan è un disastro, lotterò per voi” - Il Fatto Quotidiano",
-            "description": "“Avere coraggio può avere forme diverse. Non mi sono mai sentita bella, però l’arte mi fa sentire bella, la moda, la creatività, la fantasia; la tua fantasia ti permette di diventare chi vuoi. Ho dedicato tanto tempo recentemente all’Italia, sono stata qui a …",
-            "url": "https://www.ilfattoquotidiano.it/2021/11/15/che-tempo-che-fa-lady-gaga-laffossamento-del-ddl-zan-e-un-disastro-lottero-per-voi-cosi-fabio-fazio-ha-ospitato-in-studio-la-star-meno-diva-e-piu-grande-di-tutte/6392408/",
-            "urlToImage": "https://st.ilfattoquotidiano.it/wp-content/uploads/2021/11/15/ladygaga1200.jpg",
-            "publishedAt": "2021-11-15T09:46:11Z",
-            "content": "Volevo dire una cosa alla comunità LGBTQ+ in Italia: siete i più coraggiosi, siete i più gentili, siete unispirazione e che succeda una cosa di questo genere (lo stop al DLL Zan, ndr) dobbiamo gridar… [+3801 chars]"
+            "author": "Nicola Rotari",
+            "title": "Rapina nella casa del petroliere Miotto: tenuto in ostaggio, rubato 1 milione di euro - Corriere della Sera",
+            "description": "Treviso, rapina nella villa del petroliere Miotto. «Ricevevano indicazioni al telefono e parlavano tra di loro in albanese». L’imprenditore è atteso a dicembre in tribunale per debiti con i creditori della sua azienda posta in liquidazione",
+            "url": "https://www.corriere.it/cronache/21_novembre_16/giancarlo-miotto-petroli-moglie-rapina-villa-1629f2c8-4653-11ec-9a24-28e7c2e627b2.shtml",
+            "urlToImage": "https://images2.corriereobjects.it/methode_image/socialshare/2021/11/15/71b251ce-465a-11ec-9a24-28e7c2e627b2.jpg",
+            "publishedAt": "2021-11-16T06:38:55Z",
+            "content": "di Nicola RotariRapina nella villa del petroliere della Miotto Generale Petroli a Marocco di Mogliano Veneto. «Ricevevano indicazioni al telefono e parlavano tra di loro in albanese». L’imprenditore … [+3413 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Lastampa.it"
+            },
+            "author": "Daniela Cotto",
+            "title": "Berrettini, fiato sospeso dopo l’infortunio - La Stampa",
+            "description": "Stasera è in programma il match con Hurkacz. Ma il suo 2021 è costellato anche dai guai fisici: già agli Australian Open fu costretto al ritiro",
+            "url": "https://www.lastampa.it/sport/2021/11/16/news/con_il_fiato_sospeso-413507/",
+            "urlToImage": "https://www.gedistatic.it/content/gnn/img/lastampa/2021/11/16/072811878-a29aabb7-4723-4827-8e02-a59abbd3da90.jpg",
+            "publishedAt": "2021-11-16T06:28:31Z",
+            "content": "In campo a tutti i costi. Anche con quel male alladdome che lha fermato nel debutto alle Finals di casa. Berrettini cerca di resistere, così la sua partita contro il polacco Hubert Hurkacz rimane in … [+153 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Corriere.it"
+            },
+            "author": "Adriana Logroscino",
+            "title": "Zona gialla, quattro regioni a rischio a novembre - Corriere della Sera",
+            "description": "Il contagio in «grave peggioramento» fa temere si superi la soglia dei 250 positivi per centomila abitanti anche in Liguria e Valle d’Aosta. Ricoveri in aumento ma sotto soglia",
+            "url": "https://www.corriere.it/politica/21_novembre_16/zona-gialla-quattro-regioni-rischio-novembre-5ab9fb98-465a-11ec-9a24-28e7c2e627b2.shtml",
+            "urlToImage": "https://images2.corriereobjects.it/methode_image/2021/11/15/Politica/Foto-Politica-Trattate/17353194-kouE-U330012787024059OI-526x284@Corriere-Web-Sezioni.jpg",
+            "publishedAt": "2021-11-16T06:23:48Z",
+            "content": "di Adriana LogroscinoIn quattro regioni preoccupano i dati sull’andamento dell’epidemia: Friuli-Venezia Giulia, Veneto, Liguria e Valle d’Aosta, più Bolzano. Il contagio è in «grave peggioramento» se… [+3635 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Corriere.it"
+            },
+            "author": "Piergiuseppe Donadoni",
+            "title": "Hamilton, i segreti del supermotore Mercedes che ha battuto Verstappen - Corriere della Sera",
+            "description": "Mappatura speciale solo per Lewis, così in Brasile è tornato a volare. E la Red Bull non ha armi per rispondere. Il dubbio dell’affidabilità",
+            "url": "https://www.corriere.it/sport/formula-1/notizie/hamilton-segreti-supermotore-mercedes-che-ha-battuto-verstappen-dd421ca4-4663-11ec-9a24-28e7c2e627b2.shtml",
+            "urlToImage": "https://images2.corriereobjects.it/methode_image/socialshare/2021/11/15/a1f2605c-4666-11ec-9a24-28e7c2e627b2.jpg",
+            "publishedAt": "2021-11-16T06:18:59Z",
+            "content": "Un vantaggio di 25 cavalli?\r\nTutto questo dopo che Mercedes, proprio nei Gp precedenti a quello di Spa-Francochamps (Silverstone e Ungheria) aveva cambiato atteggiamento in termini di sfruttamento de… [+3272 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Adnkronos.com"
+            },
+            "author": "lalli",
+            "title": "Covid oggi Italia, stretta sui trasporti: nuove regole in arrivo - Adnkronos",
+            "description": "La nuova ordinanza - già pubblicata in Gazzetta ufficiale - riguarda bus, metro, treni e taxi",
+            "url": "https://www.adnkronos.com/covid-oggi-italia-stretta-sui-trasporti-nuove-regole-in-arrivo_3qAzpNbdBQAgLyGaS5pCe1",
+            "urlToImage": "https://www.adnkronos.com/resources/026f-13bbf9862569-c7e41cdb47b3-1000/covid_tram_milano_fg.jpg",
+            "publishedAt": "2021-11-16T06:13:00Z",
+            "content": "La nuova ordinanza - già pubblicata in Gazzetta ufficiale - riguarda bus, metro, treni e taxiCovid in Italia, arriva la stretta sui trasporti. Torna la biglietteria, cartelli con regole a bordo, stop… [+5090 chars]"
+        },
+        {
+            "source": {
+                "id": "il-sole-24-ore",
+                "name": "Il Sole 24 Ore"
+            },
+            "author": "Andrea Gagliardi, Andrea Carli",
+            "title": "Contagi triplicati in due mesi tra medici e infermieri: arriva l’obbligo di terza dose - Il Sole 24 ORE",
+            "description": "Dovrebbe andare in Consiglio dei ministri questa settimana il provvedimento che obbliga i sanitari alla somministrazione anche della terza dose di vaccino anti Covid.",
+            "url": "https://www.ilsole24ore.com/art/contagi-triplicati-due-mesi-medici-e-infermieri-arriva-l-obbligo-terza-dose-AEKCr8w",
+            "urlToImage": "https://i2.res.24o.it/images2010/2021/11/AEKCr8w/images/9912d19e-462d-11ec-a4eb-67b287892ed9-fotohome0.jpg",
+            "publishedAt": "2021-11-16T05:57:19Z",
+            "content": "Ascolta la versione audio dell'articolo\r\n2' di lettura\r\nDovrebbe andare in Consiglio dei ministri questa settimana, il provvedimento che obbliga i sanitari alla somministrazione anche della terza dos… [+2917 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Rainews.it"
+            },
+            "author": null,
+            "title": "Liverpool, attentatore psicolabile senza legami con terrorismo internazionale - Rai News",
+            "description": "Si era convertito al cattolicesimo, forse per ottenere l'asilo politico, e si faceva chiamare Enzo in onore di Ferrari",
+            "url": "https://www.rainews.it/dl/rainews/articoli/attentatore-psicolabile-no-legami-terrorismo-si-faceva-chiamare-enzo-75288691-0cef-4031-9145-7c5993ed2435.html",
+            "urlToImage": "https://www.rai.it/cropgd/476x249/dl/img/2021/11/1636988040513.rainews_20211115154727506_81cd6d3cc9da43e00833969d90b3b402.jpg",
+            "publishedAt": "2021-11-16T05:04:00Z",
+            "content": "2021/11/16 06:04\r\n16 novembre 2021Sembra ridimensionarsi all'azione di uno sbandato solitario, di origine araba ma senza legami con il terrorismo internazionale, e anzi apparentemente psicolabile, la… [+2011 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Rainews.it"
+            },
+            "author": null,
+            "title": "Faccia a faccia tra Biden e Xi: \"Vertice costruttivo che aumenta comprensione reciproca\" - Rai News",
+            "description": "I due presidenti si stanno parlando, in videoconferenza, per la prima volta. Su tutte pesa la questione di Taiwan e la nuova politica di Pechino dopo il congresso del Pcc",
+            "url": "https://www.rainews.it/dl/rainews/articoli/biden-xi-taiwan-ae866f18-cb90-4e8d-90a8-0304b6e0de15.html",
+            "urlToImage": "https://www.rai.it/cropgd/476x249/dl/img/2021/11/1637038287794.rainews_20211116054736312_43d316a7ebcc560d76ef58f3fc450b5f.jpg",
+            "publishedAt": "2021-11-16T01:22:00Z",
+            "content": "16 novembre 2021Si è chiuso il primo summit faccia-a-faccia, seppur virtuale, tra il presidente cinese, Xi Jinping, e il presidente Usa- Joe Biden, che oggi si sono parlati per la prima volta in vide… [+4889 chars]"
         },
         {
             "source": {
                 "id": null,
                 "name": "Gossipetv.com"
             },
-            "author": "V. M.",
-            "title": "Ascolti tv ieri: Rai1 bene, boom Fazio, Hunziker tiepida. Dati e dettagli - Gossip e TV",
-            "description": "Dati e approfondimenti sugli ascolti e sullo share dei programmi televisivi in onda domenica 14 novembre 2021",
-            "url": "https://www.gossipetv.com/ascolti-tv-ieri-domenica-14-novembre-564322",
-            "urlToImage": "https://www.gossipetv.com/wp-content/uploads/2021/11/Ascolti-7-novembre-1000x600.jpg",
-            "publishedAt": "2021-11-15T09:33:57Z",
-            "content": "Ascolti e share domenica 14 novembre 2021 – La fiction di Rai Uno Cuori, con l’episodio Suzanne, conquista la prima serata confermando i risultati delle settimane precedenti: 17.7% di share e quasi 4… [+2909 chars]"
+            "author": "Ilaria Columpsi",
+            "title": "GF Vip 6 diciannovesima puntata: preferito, nominati, giochi scoperti - Gossip e TV",
+            "description": "Alfonso Signorini è tornato su Canale 5 con i suoi Vipponi per un nuovo appuntamento con il pubblico: cos'è successo",
+            "url": "https://www.gossipetv.com/gf-vip-6-diciannovesima-puntata-preferito-nominati-15-novembre-564423",
+            "urlToImage": "https://www.gossipetv.com/wp-content/uploads/2021/11/signorini-gomito-1000x600.jpg",
+            "publishedAt": "2021-11-16T00:36:16Z",
+            "content": "Lunedì 15 novembre 2021 è andata in onda la diciannovesima puntata del Grande Fratello Vip 6. Una serata molto speciale per Giucas Casella che ha ricevuto una bellissima sorpresa per il suo compleann… [+4826 chars]"
         },
         {
             "source": {
                 "id": null,
-                "name": "Mediaset.it"
+                "name": "Fanpage.it"
+            },
+            "author": "Maurizio De Santis",
+            "title": "Quali avversarie può incontrare l’Italia ai playoff per andare ai Mondiali in Qatar - Sport Fanpage",
+            "description": "Italia da testa di serie ai playoff per qualificarsi ai Mondiali di Qatar 2022. Ecco possibili avversarie degli Azzurri e regolamento, il 26 novembre sorteggio a Zurigo.",
+            "url": "https://www.fanpage.it/sport/calcio/quali-avversarie-potrebbe-incontrare-litalia-ai-playoff-per-andare-ai-mondiali-in-qatar/",
+            "urlToImage": "https://static.fanpage.it/wp-content/uploads/sites/27/2021/11/INCUBO-MONDIALE-CLAIM-IMG.jpg",
+            "publishedAt": "2021-11-15T22:40:55Z",
+            "content": "Italia da testa di serie ai playoff per qualificarsi ai Mondiali di Qatar 2022. Ecco possibili avversarie degli Azzurri e regolamento, il 26 novembre sorteggio a Zurigo.\r\nLa vittoria della Svizzera (… [+3482 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Rainews.it"
             },
             "author": null,
-            "title": "Bielorussia, Lukashenko: \"Pronti a rimandare i migranti in patria\" - TGCOM",
-            "description": "L'Alto rappresentante per la politica estera Ue, Josep Borrell: \"La situazione è completamente inaccettabile, deve essere fornito aiuto umanitario\"",
-            "url": "https://www.tgcom24.mediaset.it/mondo/bielorussia-lukashenko-pronti-a-rimandare-migranti-in-patria_41589913-202102k.shtml",
-            "urlToImage": "https://img-prod.tgcom24.mediaset.it/images/2021/11/15/090335170-224f7f3f-56f5-4e15-87ba-eee40ac98952.jpg",
-            "publishedAt": "2021-11-15T09:22:28Z",
-            "content": "Il presidente bielorusso si è detto pronto a trasportare i migranti bloccati al confine con la Polonia a Monaco, in Germania, con i jet della compagnia di bandiera Belavia.\r\nIntanto, il governo irach… [+829 chars]"
+            "title": "Calcio, un'Italia deludente fermata a Belfast. Azzurri costretti agli spareggi, Svizzera ai Mondiali - Rai News",
+            "description": "Solo 0-0 per la Nazionale di Mancini contro l'Irlanda del Nord, mentre gli elvetici asfaltano la Bulgaria 4-0. Il 26 novembre il sorteggio per i playoff di marzo",
+            "url": "https://www.rainews.it/dl/rainews/articoli/Calcio-un-Italia-deludente-fermata-a-Belfast-Azzurri-costretti-agli-spareggi-Svizzera-ai-Mondiali-01dcb303-3889-426b-9fe6-963670ddda2c.html",
+            "urlToImage": "https://www.rai.it/cropgd/476x249/dl/img/2021/11/1637010258261.GettyImages_1236586992.jpg",
+            "publishedAt": "2021-11-15T22:25:00Z",
+            "content": "Una fase del match (Getty)\r\n15 novembre 2021L'Italia agli spareggi di marzo, la Svizzera in Qatar. Questo il verdetto dell'ultima giornata del girone di qualificazione ai Mondiali 2022.Contro l'Irlan… [+7374 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Multiplayer.it"
+            },
+            "author": "Simone Tagliaferri",
+            "title": "Halo Infinite, la beta multiplayer ha superato New World su Steam tra i titoli più giocati - Multiplayer.it",
+            "description": "La beta multiplayer di Halo Infinite ha superato New World su Steam tra i titoli più giocati, arrivando sul podio della piattaforma.",
+            "url": "https://multiplayer.it/notizie/halo-infinite-beta-multiplayer-ha-superato-new-world-steam-tra-titoli-piu-giocati.html",
+            "urlToImage": "https://multiplayer.net-cdn.it/thumbs/images/2021/06/14/halo-infinite-e3-2021_jpg_750x400_crop_upscale_q85.jpg",
+            "publishedAt": "2021-11-15T22:07:41Z",
+            "content": "Nel giro di pochissime ore, la beta multiplayer di Halo Infinite ha scalato la classifica dei titoli più giocati su Steam, raggiungendo la terza posizione, occupata sino a quel momento dal MMORPG New… [+755 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Leggo.it"
+            },
+            "author": "Redazione Web",
+            "title": "Lady Gaga butta a terra i fiori di Fazio: regalo non gradito o gesto d'amore per i fan? - leggo.it",
+            "description": "E' finito a terra il maxi bouquet di rose che Lady Gaga ha ricevuto in omaggio dal conduttore...",
+            "url": "https://www.leggo.it/spettacoli/televisione/lady_gaga_butta_terra_fiori_di_fazio_regalo_non_gradito_gesto_d_amore_fan-6323915.html",
+            "urlToImage": "https://www.leggo.it/photos/MED/39/15/6323915_2234_gaga_ansa.jpg",
+            "publishedAt": "2021-11-15T22:00:08Z",
+            "content": "E' finito a terra il maxi bouquet di rose che Lady Gaga ha ricevuto in omaggio dal conduttore Fabio Fazio dopo l'ospitata a Che tempo che fa su Rai3 per presentare il nuovo film di Ridley Scott, «Hou… [+1870 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Rainews.it"
+            },
+            "author": null,
+            "title": "Attacco a Capitol Hill, Bannon non sarà detenuto in attesa di giudizio - Rai News",
+            "description": "L'ex consigliere di Trump in tribunale per oltraggio al Congresso",
+            "url": "https://www.rainews.it/dl/rainews/articoli/Attacco-a-Capitol-Hill-Bannon-si-consegna-all-Fbi-3369be34-b9f9-493f-903e-0112043f4c48.html",
+            "urlToImage": "https://www.rai.it/cropgd/476x249/dl/img/2021/11/1636988381596.AP21319535965779.jpg",
+            "publishedAt": "2021-11-15T20:15:00Z",
+            "content": "Steve Bannon (Ap)\r\n15 novembre 2021Ssteve Bannon non sarà detenuto, ma resterà in una sorta di libertà vigilata prima del processo per oltraggio al Congresso, nell'ambito dell'indagine parlamentare s… [+2663 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Ilpost.it"
+            },
+            "author": null,
+            "title": "L’Unione Europea imporrà sanzioni alla Bielorussia per aver facilitato l’arrivo di migranti al confine con la Polonia - Il Post",
+            "description": "L'Unione Europea ha trovato un accordo per imporre sanzioni alla Bielorussia, che coinvolgeranno «persone, linee aeree, agenzie di viaggi e qualunque",
+            "url": "https://www.ilpost.it/2021/11/15/unione-europea-bielorussia-sanzioni-migranti/",
+            "urlToImage": "https://www.ilpost.it/wp-content/uploads/2021/11/BANZAILIQSOLD1_20211115200349501_f1316be6c93884cf9450e6f3e8c563bd.jpg",
+            "publishedAt": "2021-11-15T19:08:04Z",
+            "content": "L’Unione Europea ha trovato un accordo per imporre sanzioni alla Bielorussia, che coinvolgeranno «persone, linee aeree, agenzie di viaggi e qualunque soggetto abbia contribuito a spingere illegalment… [+1940 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "GPone English"
+            },
+            "author": "Riccardo Gugliemetti",
+            "title": "Valencia: Valentino Rossi proclamato Leggenda della MotoGP - GPOne.com",
+            "description": "Ezpeleta consegna il riconoscimento a Valentino: “Ho sempre pensato che questo giorno sarebbe stato un incubo, ma mi sono divertito\"",
+            "url": "https://www.gpone.com/it/2021/11/15/motogp/valencia-valentino-rossi-proclamato-leggenda-della-motogp.html",
+            "urlToImage": "https://www.gpone.com/sites/default/files/images/2021/article/foto/11/MotoGP/generic/rossi2-1636924850.jpg",
+            "publishedAt": "2021-11-15T18:31:59Z",
+            "content": "I motori si sono spenti, ma i riflettori restano accesi, perché a Valencia è andata in scena la tradizionale cerimonia di premiazione serale dei piloti protagonisti delle tre categorie.\r\nTra questi p… [+563 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Ilmattino.it"
+            },
+            "author": "Redazione Web",
+            "title": "Gomorra 5, il 19 novembre la resa dei conti ma Saviano frena: «Non ci sono eroi» - ilmattino.it",
+            "description": "Nessuno sconto, inseguimenti, sparatorie, rese dei conti e ovviamente il faccia a faccia tra i due...",
+            "url": "https://www.ilmattino.it/spettacoli/televisione/gomorra_5_uscita_finale_roberto_saviano_cosa_ha_detto_spoiler-6323617.html",
+            "urlToImage": "https://www.ilmattino.it/photos/MED/36/17/6323617_1811_gomorra.jpg",
+            "publishedAt": "2021-11-15T18:11:21Z",
+            "content": "Nessuno sconto, inseguimenti, sparatorie, rese dei conti e ovviamente il faccia a faccia tra i due protagonisti, Ciro Di Marzio (Marco D'Amore) e Genny Savastano (Gennaro Esposito) come raccontano gl… [+4020 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Ilgazzettino.it"
+            },
+            "author": "Redazione Web",
+            "title": "No vax, l'Ordine ha radiato il medico-sindaco Szumski, ma il ricorso gli permette di esercitare ancora - ilgazzettino.it",
+            "description": "TREVISO - L’Ordine dei medici di Treviso ha radiato Riccardo Szumski, 69 anni, dottore...",
+            "url": "https://www.ilgazzettino.it/nordest/treviso/covid_no_vax_riccardo_szumski_radiato_ordine_medici-6323477.html",
+            "urlToImage": "https://www.ilgazzettino.it/photos/MED/34/77/6323477_1719_szumski_ricc.jpg",
+            "publishedAt": "2021-11-15T16:23:55Z",
+            "content": "TREVISO - L’Ordine dei medici di Treviso ha radiato Riccardo Szumski, 69 anni, dottore di famiglia e sindaco di Santa Lucia di Piave (Treviso), paladino della galassia No-Vax, già alla guida di diver… [+1258 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Corriere.it"
+            },
+            "author": "Fausta Chiesa",
+            "title": "Bonus casa, cessione e sconto in fattura: riattivata la piattaforma per le comunicazioni - Corriere della Sera",
+            "description": "L’Agenzia delle Entrate ha «riaperto il canale per la trasmissione delle comunicazioni» riattivando la piattaforma informatica. Ernesto Maria Ruffini: «Con il Superbonus 950 milioni di euro di frodi, era urgente intervenire»",
+            "url": "https://www.corriere.it/economia/tasse/21_novembre_15/bonus-edilizi-cessione-sconto-fattura-riattivata-piattaforma-le-comunicazioni-5573a464-4627-11ec-9a24-28e7c2e627b2.shtml",
+            "urlToImage": "https://images2.corriereobjects.it/methode_image/socialshare/2021/11/15/a3207e1e-462a-11ec-9a24-28e7c2e627b2.jpg",
+            "publishedAt": "2021-11-15T16:00:28Z",
+            "content": "Alla fine è durata lo spazio di un weekend o poco più l’interruzione del servizio online del fisco per comunicare la cessione del credito e lo sconto in fattura dei bonus edilizi. L’Agenzia delle Ent… [+1911 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Udinetoday.it"
+            },
+            "author": "Redazione",
+            "title": "\"Friuli Venezia Giallo\", Fedriga: \"Misure contenute, il dramma sarebbe l'arancione\" - UdineToday",
+            "description": "Il presidente, considerando l'inevitabilità del provvedimento, si concentra sullo scongiurare ipotesi peggiori",
+            "url": "https://www.udinetoday.it/attualita/fedriga-vero-dramma-zona-arancione.html",
+            "urlToImage": "https://www.udinetoday.it/~media/horizontal-hi/65673877755150/thumb500_78118_fedrigamascherina2-2.jpg",
+            "publishedAt": "2021-11-15T15:52:43Z",
+            "content": "\"Non possiamo fare pagare il prezzo di eventuali nuove chiusure ai vaccinati, che hanno difeso se stessi e gli altri, partecipando alla campagna vaccinale\". Lo ha detto oggi a Udine il presidente del… [+1504 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Rainews.it"
+            },
+            "author": null,
+            "title": "Vaccini. Palù: \"Su dose a bambini Ema decide il 29 novembre\" - Rai News",
+            "description": "Il Presidente dell'Aifa poi ha sottolineato che non si deve parlare \"di terza dose come di uno spauracchio, è un normale passaggio del percorso vaccinale e vale per tutti i virus",
+            "url": "https://www.rainews.it/dl/rainews/articoli/vaccini-palu-su-dose-a-bambini-ema-decide-il-29-novembre-7cd42538-c03e-46bc-af1b-f02e9a97aa4e.html",
+            "urlToImage": "https://www.rai.it/cropgd/476x249/dl/img/2021/10/1634970134335.GettyImages_1337871061.jpg",
+            "publishedAt": "2021-11-15T13:32:00Z",
+            "content": "15 novembre 2021\"L'Ema prenderà una decisione il 29 novembre sulla vaccinazione ai bambini.  Noi seguiremo quanto deciderà l'Ema\". Lo ha detto Giorgio Palù presidente dell'Aifa, intervenendo con il g… [+733 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Liberoquotidiano.it"
+            },
+            "author": "@libero_official",
+            "title": "Green pass, cambiano i requisiti? Ecco quali potrebbero non essere più validi: a un passo dal caos - Liberoquotidiano.it",
+            "description": "\"Vaccino e tampone non sono paragonabili\". Per  Donato Greco , epidemiologo e componente del Comitato tecnico-scientifico, alle dosi co...",
+            "url": "https://www.liberoquotidiano.it/news/personaggi/29455127/green-pass-cambio-requisiti-donato-greco-cts-quali-non-piu-validi.html",
+            "urlToImage": "https://img2.liberoquotidiano.it/images/2021/11/15/133938967-a2080c57-8827-45fc-8819-aa3e1bc97579.jpg",
+            "publishedAt": "2021-11-15T13:20:00Z",
+            "content": "\"Vaccino e tampone non sono paragonabili\". Per Donato Greco, epidemiologo e componente del Comitato tecnico-scientifico, alle dosi contro il Covid e al Green pass dobbiamo il ritorno a una certa norm… [+1757 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Ilfattoquotidiano.it"
+            },
+            "author": "Mauro Del Corno",
+            "title": "Bernie Sanders chiede più tasse per i super ricchi ed Elon Musk di Tesla lo attacca: “Mi ero… - Il Fatto Quotidiano",
+            "description": "Botta e risposta su Twitter tra il senatore democratico e il fondatore di Tesla, considerato l'uomo più ricco del mondo con un patrimonio stimato di oltre 300 miliardi di dollari. Tema del contendere è la proposta di riforma fiscale in discussione al Senato c…",
+            "url": "https://www.ilfattoquotidiano.it/2021/11/15/bernie-sanders-chiede-piu-tasse-per-i-super-ricchi-ed-elon-musk-di-tesla-lo-attacca-mi-ero-dimenticato-fossi-ancora-vivo/6392513/",
+            "urlToImage": "https://st.ilfattoquotidiano.it/wp-content/uploads/2021/11/15/sanders_1200.jpg",
+            "publishedAt": "2021-11-15T11:01:05Z",
+            "content": "Caduta di stile, non la prima, per il patron di Tesla Elon Musk. La schermaglia è avvenuta su Twitter, il social più amato e sfruttato da Musk, in relazione ad un tweet del senatore democratico Berni… [+3159 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Lastampa.it"
+            },
+            "author": "edoardo izzo",
+            "title": "Non vuole indossare velo e burqa, trauma cranico per una 14enne bengalese picchiata da madre e fratello - La Stampa",
+            "description": "La ragazza è stata medicata in ospedale per diversi traumi subiti. Ora si trova in una struttura protetta",
+            "url": "https://www.lastampa.it/cronaca/2021/11/15/news/non_vuole_indossare_il_velo_e_il_burqa_trauma_cranico_per_una_14enne_bengalese_picchiata_da_madre_e_fratello_-412777/",
+            "urlToImage": "https://www.gedistatic.it/content/gnn/img/lastampa/2021/11/15/114643291-fe85b7d7-7bfd-43d2-8955-cd3426126c2c.jpg",
+            "publishedAt": "2021-11-15T10:46:47Z",
+            "content": "Botte, prevaricazioni e violenze. Il motivo uno soltanto: il rifiuto dell'educazione islamica imposta dalla sua famiglia. Vittima una 14enne originaria del Bangladesh che sabato pomeriggio si è prese… [+1073 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Eurogamer.it"
+            },
+            "author": "Matteo Zibbo",
+            "title": "'GTA Trilogy - The Definitive Edition non è il nuovo Cyberpunk 2077, è molto peggio' - Eurogamer.it",
+            "description": "GTA Trilogy è più deludente di Cyberpunk 2077, secondo un giornalista.",
+            "url": "https://www.eurogamer.it/articles/news-gta-trilogy-cyberpunk-2077-definitive-edition-peggiore",
+            "urlToImage": "https://d2skuhm0vrry40.cloudfront.net/2021/articles/2021-11-15-10-23/news-gta-trilogy-cyberpunk-2077-definitive-edition-peggiore-1636971837060.jpg/EG11/resize/1200x-1/news-gta-trilogy-cyberpunk-2077-definitive-edition-peggiore-1636971837060.jpg",
+            "publishedAt": "2021-11-15T10:40:00Z",
+            "content": "Ieri, Cyberpunk 2077 ha iniziato a diventare di tendenza sui social media e, sorpresa, non è stato a causa di nuovi aggiornamenti. Piuttosto, perché i giocatori stavano confrontando il disastroso lan… [+3143 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Ilgiorno.it"
+            },
+            "author": "Il Giorno",
+            "title": "Covid Italia, contagi e morti in aumento. Spuntano mini lockdown e restrizioni: ecco dove - IL GIORNO",
+            "description": "Nell'ultima settimana i casi sono saliti del 42%. E anche le terapie intensive iniziano ad affollarsi. Da Nord a Sud, i sindaci corrono ai ripari in attesa del governo",
+            "url": "https://www.ilgiorno.it/cronaca/covid-italia-contagi-morti-lockdown-restrizioni-1.7037350",
+            "urlToImage": "https://immagini.quotidiano.net/?url=http%3A%2F%2Fp1014p.quotidiano.net%3A80%2Fpolopoly_fs%2F1.5814922.1636966759%21%2FhttpImage%2Fimage.jpg_gen%2Fderivatives%2Fwidescreen%2Fimage.jpg&w=700&h=391",
+            "publishedAt": "2021-11-15T09:07:12Z",
+            "content": "Covid e quarta ondata, torna la grande paura. A certificare un trend poco rassicurante è l'analisi dei bollettini giornalieri stilati da Ministero della Salute e Istituto superiore di Sanità. Nella s… [+3781 chars]"
         },
         {
             "source": {
@@ -395,54 +434,15 @@
         {
             "source": {
                 "id": null,
-                "name": "Ecodibergamo.it"
+                "name": "Ilmessaggero.it"
             },
-            "author": "L'Eco di Bergamo",
-            "title": "Speranza: «Il Natale dipende da noi, manteniamo le regole». Green pass, ipotesi della riduzione della durata - L'Eco di Bergamo",
-            "description": "Salgono i contagi, ma ricoveri e terapie intensive sono al momento sotto controllo, mentre le terze dosi del vaccino anti-Covid hanno quasi raggiunto quota 3 milioni. Ma il ministro della Salute Roberto Speranza dallo studio di «Che tempo che fa» avverte in v…",
-            "url": "https://www.ecodibergamo.it/stories/Cronaca/speranza-il-natale-dipende-da-noi-manteniamo-le-regole-green-pass-ipotesi_1412786_11/",
-            "urlToImage": "https://storage.ecodibergamo.it/media/photologue/2021/11/2/photos/cache/speranza-il-natale-dipende-da-noi-manteniamo-le-regole-green-pass-ipotesi_7ac01828-45e7-11ec-972f-332cc1767e8a_998_397_display.jpg",
-            "publishedAt": "2021-11-15T07:42:36Z",
-            "content": "Salgono i contagi, ma ricoveri e terapie intensive sono al momento sotto controllo, mentre le terze dosi del vaccino anti-Covid hanno quasi raggiunto quota 3 milioni. Ma il ministro della Salute Robe… [+3302 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Tuttoandroid.net"
-            },
-            "author": "Giovanni Mattei",
-            "title": "Realme GT Neo 2 5G arriva in Italia: ecco come averlo a un prezzo super - TuttoAndroid.net",
-            "description": "Realme GT Neo 2 è disponibile all'acquisto in Italia su eBay nella variante 8+128 GB e 12+256 GB con un codice coupon esclusivo",
-            "url": "https://www.tuttoandroid.net/news/2021/11/15/realme-gt-neo-2-disponibile-italia-919529/",
-            "urlToImage": "https://img.tuttoandroid.net/wp-content/uploads/2021/09/realme-gt-neo2-ufficiale-specifiche-prezzo-feat.jpg",
-            "publishedAt": "2021-11-15T07:40:15Z",
-            "content": "Presentato a fine settembre con le premesse di diventare il nuovo flagship killer di fine 2021, Realme GT Neo 2è disponibile all’acquisto in Italia a un prezzo davvero niente male, soprattutto se si … [+1131 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Tuttoandroid.net"
-            },
-            "author": "Marco Grasso",
-            "title": "Disinstallate subito queste 7 applicazioni, anche loro contengono il virus Joker - TuttoAndroid.net",
-            "description": "Il pericoloso malware Joker è tornato ancora una volta e si nasconde in diverse applicazioni per Android che fareste bene a cancellare immediatamente. L'ultima volta era stato avvistato a inizio estate in 8 app, mentre in questo caso è stato scovato in altre …",
-            "url": "https://www.tuttoandroid.net/news/2021/11/14/applicazione-virus-joker-novembre-2021-919515/",
-            "urlToImage": "https://img.tuttoandroid.net/wp-content/uploads/2020/06/virus_malware_trojan_vulnerabili-1.jpg",
-            "publishedAt": "2021-11-14T15:26:45Z",
-            "content": "Il pericoloso malware Joker è tornato ancora una volta e si nasconde in diverse applicazioni per Android che fareste bene a cancellare immediatamente. L’ultima volta era stato avvistato a inizio esta… [+1499 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Tomshw.it"
-            },
-            "author": "Antonio Rodo",
-            "title": "Black Friday Aliexpress, i prodotti da non perdere! - Tom's Hardware Italia",
-            "description": "Il Black Friday è alle porte, e noi abbiamo pensato bene di bruciare le tappe suggerendovi alcuni prodotti che, con…",
-            "url": "https://www.tomshw.it/offerte/black-friday-aliexpress/",
-            "urlToImage": "https://www.tomshw.it/images/images/2021/11/foto-generiche-196444.768x432.jpg",
-            "publishedAt": "2021-11-14T09:00:00Z",
-            "content": "Il Black Friday 2021 è ormai dietro langolo. Esattamente come voi, non vediamo lora di conoscere quali saranno tutte le principali offerte e di comunicarvele al più presto. Anticipiamo già che non ma… [+5079 chars]"
+            "author": "Redazione Web",
+            "title": "Vaccino ai bimbi 5-11 anni, prime dosi in Israele. In Cina la fascia 3-11 anni «tutta coperta» entro il 2021 - ilmessaggero.it",
+            "description": "Israele accelera sui vaccini, per questo ha dato il via libera alla vaccinazione dei bambini dai 5...",
+            "url": "https://www.ilmessaggero.it/salute/storie/vaccino_bambini_5_11_anni_israele_cina_cosa_succede-6322943.html",
+            "urlToImage": "https://www.ilmessaggero.it/photos/MED/29/43/6322943_0817_vaccini_bambini_israele_news.jpg",
+            "publishedAt": "2021-11-15T07:17:56Z",
+            "content": "Israele accelera sui vaccini, per questo ha dato il via libera alla vaccinazione dei bambini dai 5 agli 11 anni con dosi Pfizer/BioNtech nella speranza di arginare la pandemia di Covid-19. «La maggio… [+4717 chars]"
         }
     ]
 }
