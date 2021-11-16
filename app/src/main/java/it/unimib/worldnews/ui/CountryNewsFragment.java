@@ -13,6 +13,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
@@ -29,6 +31,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import it.unimib.worldnews.R;
+import it.unimib.worldnews.adapter.NewsListViewArrayAdapter;
+import it.unimib.worldnews.adapter.NewsListViewBaseAdapter;
 import it.unimib.worldnews.adapter.NewsRecyclerViewAdapter;
 import it.unimib.worldnews.model.News;
 import it.unimib.worldnews.model.NewsResponse;
@@ -41,15 +45,12 @@ public class CountryNewsFragment extends Fragment {
 
     private static final String TAG = "CountryNewsFragment";
 
-    private ListView mListViewCountryNews;
     private News[] mNewsArray;
     private List<News> mNewsList;
 
     private List<News> mNewsListWithJsonReader;
     private List<News> mNewsListWithJsonObjectArray;
     private List<News> mNewsListWithGson;
-
-    private RecyclerView mRecyclerViewCountryNews;
 
     public CountryNewsFragment() {
         // Required empty public constructor
@@ -95,7 +96,7 @@ public class CountryNewsFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_country_news_recyclerview, container, false);
 
-        mRecyclerViewCountryNews = view.findViewById(R.id.recyclerview_country_news);
+        RecyclerView mRecyclerViewCountryNews = view.findViewById(R.id.recyclerview_country_news);
         mRecyclerViewCountryNews.setLayoutManager(new LinearLayoutManager(getContext()));
 
         NewsRecyclerViewAdapter adapter = new NewsRecyclerViewAdapter(mNewsListWithJsonObjectArray,
@@ -112,7 +113,9 @@ public class CountryNewsFragment extends Fragment {
         // Inflate the layout for this fragment
         /*View view = inflater.inflate(R.layout.fragment_country_news_listview, container, false);
 
-        mListViewCountryNews = view.findViewById(R.id.listview_country_news);
+        ListView mListViewCountryNews = view.findViewById(R.id.listview_country_news);*/
+
+        // ArrayAdapter
 
         /*ArrayAdapter<News> adapter = new ArrayAdapter<>(getContext(),
                 android.R.layout.simple_list_item_1, mNewsArray);
@@ -126,8 +129,10 @@ public class CountryNewsFragment extends Fragment {
             }
         });*/
 
+        // Custom Adapter that extends ArrayAdapter
+
         /*NewsListViewArrayAdapter newsNewsListViewArrayAdapter =
-                new NewsListViewArrayAdapter(getContext(), R.layout.country_news_list_item, mNewsArray);
+                new NewsListViewArrayAdapter(requireContext(), R.layout.country_news_list_item, mNewsArray);
 
         mListViewCountryNews.setAdapter(newsNewsListViewArrayAdapter);
 
@@ -138,14 +143,17 @@ public class CountryNewsFragment extends Fragment {
             }
         });*/
 
-        /*NewsListViewBaseAdapter newsListViewBaseAdapter = new NewsListViewBaseAdapter(requireActivity(), mNewsList);
+        // Custom Adapter that extends Base
+
+        /*NewsListViewBaseAdapter newsListViewBaseAdapter =
+                new NewsListViewBaseAdapter(mNewsListWithGson);
 
         mListViewCountryNews.setAdapter(newsListViewBaseAdapter);
 
         mListViewCountryNews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.d(TAG, "onItemClick: " + mNewsList.get(position));
+                Log.d(TAG, "onItemClick: " + mNewsListWithGson.get(position));
             }
         });*/
 
@@ -173,11 +181,11 @@ public class CountryNewsFragment extends Fragment {
             while (jsonReader.hasNext()) {
                 String responseParameter = jsonReader.nextName();
 
-                if (responseParameter.equals("status")) {
+                if (responseParameter.equals("status") && jsonReader.peek() != JsonToken.NULL) {
                     newsResponse.setStatus(jsonReader.nextString());
-                } else if (responseParameter.equals("totalResults")) {
+                } else if (responseParameter.equals("totalResults") && jsonReader.peek() != JsonToken.NULL) {
                     newsResponse.setTotalResults(jsonReader.nextInt());
-                } else if (responseParameter.equals("articles")) {
+                } else if (responseParameter.equals("articles") && jsonReader.peek() != JsonToken.NULL) {
                     jsonReader.beginArray(); // articles array
 
                     while (jsonReader.hasNext()) {
@@ -191,7 +199,6 @@ public class CountryNewsFragment extends Fragment {
 
                             if (articleParameter.equals("title") && jsonReader.peek() != JsonToken.NULL) {
                                 String title = jsonReader.nextString();
-                                Log.d(TAG, "readJsonFile: " + title);
                                 news.setTitle(title);
                             } else if (articleParameter.equals("author") && jsonReader.peek() != JsonToken.NULL) {
                                 news.setAuthor(jsonReader.nextString());
@@ -212,7 +219,6 @@ public class CountryNewsFragment extends Fragment {
                                     String sourceParameter = jsonReader.nextName();
                                     if (sourceParameter.equals("name") && jsonReader.peek() != JsonToken.NULL) {
                                         String source = jsonReader.nextString();
-                                        Log.d(TAG, "readJsonFile source: " + source);
                                         news.setNewsSource(new NewsSource(source));
                                     } else {
                                         jsonReader.skipValue();

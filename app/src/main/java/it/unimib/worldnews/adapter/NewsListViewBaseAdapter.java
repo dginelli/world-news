@@ -1,6 +1,7 @@
 package it.unimib.worldnews.adapter;
 
 import android.app.Activity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -19,11 +20,9 @@ import it.unimib.worldnews.model.News;
  */
 public class NewsListViewBaseAdapter extends BaseAdapter {
 
-    private Activity mActivity;
     private List<News> mListNews;
 
-    public NewsListViewBaseAdapter(Activity mActivity, List<News> mListNews) {
-        this.mActivity = mActivity;
+    public NewsListViewBaseAdapter(List<News> mListNews) {
         this.mListNews = mListNews;
     }
 
@@ -49,7 +48,8 @@ public class NewsListViewBaseAdapter extends BaseAdapter {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         if (convertView == null) {
-            convertView = mActivity.getLayoutInflater().inflate(R.layout.country_news_list_item, parent, false);
+            convertView = LayoutInflater.from(parent.getContext()).
+                    inflate(R.layout.country_news_list_item, parent, false);
         }
 
         TextView textViewNewsTitle = convertView.findViewById(R.id.news_title);
