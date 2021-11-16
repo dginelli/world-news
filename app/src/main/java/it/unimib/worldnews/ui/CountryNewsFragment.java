@@ -13,11 +13,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -28,8 +29,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import it.unimib.worldnews.R;
-import it.unimib.worldnews.adapter.NewsListViewArrayAdapter;
-import it.unimib.worldnews.adapter.NewsListViewBaseAdapter;
 import it.unimib.worldnews.adapter.NewsRecyclerViewAdapter;
 import it.unimib.worldnews.model.News;
 import it.unimib.worldnews.model.NewsResponse;
@@ -46,7 +45,11 @@ public class CountryNewsFragment extends Fragment {
     private News[] mNewsArray;
     private List<News> mNewsList;
 
-    private RecyclerView mReciclerViewCountryNews;
+    private List<News> mNewsListWithJsonReader;
+    private List<News> mNewsListWithJsonObjectArray;
+    private List<News> mNewsListWithGson;
+
+    private RecyclerView mRecyclerViewCountryNews;
 
     public CountryNewsFragment() {
         // Required empty public constructor
@@ -65,6 +68,26 @@ public class CountryNewsFragment extends Fragment {
             mNewsList.add(new News(new NewsSource("Source"), null,
                     "Title " + i, null, null, null, null, null));
         }
+
+        NewsResponse newsResponseWithJsonReader = readJsonFileWithJsonReader();
+        NewsResponse newsResponseWithJsonObjectArray = readJsonFileWithJsonObjectArray();
+        NewsResponse newsResponseWithGson = readJsonFileWithGson();
+
+        mNewsListWithJsonReader = newsResponseWithJsonReader.getArticles();
+        mNewsListWithJsonObjectArray = newsResponseWithJsonObjectArray.getArticles();
+        mNewsListWithGson = newsResponseWithGson.getArticles();
+
+        for (int i = 0; i < mNewsListWithJsonReader.size(); i++) {
+            Log.d(TAG, "JsonReader: " + mNewsListWithJsonReader.get(i));
+        }
+
+        for (int i = 0; i < mNewsListWithJsonObjectArray.size(); i++) {
+            Log.d(TAG, "JsonObjectArray: " + mNewsListWithJsonObjectArray.get(i));
+        }
+
+        for (int i = 0; i < mNewsListWithGson.size(); i++) {
+            Log.d(TAG, "Gson: " + mNewsListWithGson.get(i));
+        }
     }
 
     @Override
@@ -72,22 +95,24 @@ public class CountryNewsFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_country_news_recyclerview, container, false);
 
-        mReciclerViewCountryNews = view.findViewById(R.id.recyclerview_country_news);
+        mRecyclerViewCountryNews = view.findViewById(R.id.recyclerview_country_news);
+        mRecyclerViewCountryNews.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        /*NewsRecyclerViewAdapter adapter = new NewsRecyclerViewAdapter(mNewsList,
+        NewsRecyclerViewAdapter adapter = new NewsRecyclerViewAdapter(mNewsListWithJsonObjectArray,
                 new NewsRecyclerViewAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(News news) {
                         Log.d(TAG, "onItemClick: " + news);
                     }
                 });
-        mReciclerViewCountryNews.setLayoutManager(new LinearLayoutManager(getContext()));
-        mReciclerViewCountryNews.setAdapter(adapter);
+        mRecyclerViewCountryNews.setAdapter(adapter);
+
+        /* ###### Examples with ListView and different types of Adapters ###### */
 
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_country_news_listview, container, false);
+        /*View view = inflater.inflate(R.layout.fragment_country_news_listview, container, false);
 
-        mListViewCountryNews = view.findViewById(R.id.listview_country_news);*/
+        mListViewCountryNews = view.findViewById(R.id.listview_country_news);
 
         /*ArrayAdapter<News> adapter = new ArrayAdapter<>(getContext(),
                 android.R.layout.simple_list_item_1, mNewsArray);
@@ -124,36 +149,15 @@ public class CountryNewsFragment extends Fragment {
             }
         });*/
 
-        mReciclerViewCountryNews = view.findViewById(R.id.recyclerview_country_news);
-
-        mReciclerViewCountryNews.setLayoutManager(new LinearLayoutManager(getContext()));
-
-        NewsResponse newsResponseWithJsonReader = readJsonFileWithJsonReader();
-        NewsResponse newsResponseWithGson = readJsonFileWithGson();
-
-        List<News> newsListWithJsonReader = newsResponseWithJsonReader.getArticles();
-        List<News> newsListWithGson = newsResponseWithGson.getArticles();
-
-        for (int i = 0; i < newsListWithJsonReader.size(); i++) {
-            Log.d(TAG, "JsonReader: " + newsListWithJsonReader.get(i));
-        }
-
-        for (int i = 0; i < newsListWithGson.size(); i++) {
-            Log.d(TAG, "Gson: " + newsListWithGson.get(i));
-        }
-
-        NewsRecyclerViewAdapter adapter = new NewsRecyclerViewAdapter(newsListWithGson,
-                new NewsRecyclerViewAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(News news) {
-                        Log.d(TAG, "onItemClick: " + news);
-                    }
-                });
-        mReciclerViewCountryNews.setAdapter(adapter);
-
         return view;
     }
 
+    /**
+     * It parses the news-test.json file using the JsonReader
+     * (https://developer.android.com/reference/android/util/JsonReader) class.
+     *
+     * @return The NewsResponse object associated with the parsed JSON file.
+     */
     private NewsResponse readJsonFileWithJsonReader() {
 
         NewsResponse newsResponse = new NewsResponse();
@@ -236,6 +240,69 @@ public class CountryNewsFragment extends Fragment {
         return newsResponse;
     }
 
+    /**
+     * It parses the news-test.json file using JSONObject (https://developer.android.com/reference/org/json/JSONObject)
+     * ans JSONArray (https://developer.android.com/reference/org/json/JSONArray) classes.
+     *
+     * @return The NewsResponse object associated with the parsed JSON file.
+     */
+    private NewsResponse readJsonFileWithJsonObjectArray() {
+
+        NewsResponse newsResponse = null;
+
+        try {
+
+            InputStream is = getActivity().getAssets().open("news-test.json");
+
+            int size = is.available();
+
+            // Read the entire asset into a local byte buffer.
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+
+            String jsonContent = new String(buffer);
+
+            newsResponse = new NewsResponse();
+            JSONObject rootJsonObject = new JSONObject(jsonContent);
+
+            newsResponse.setStatus(rootJsonObject.getString("status"));
+            newsResponse.setTotalResults(rootJsonObject.getInt("totalResults"));
+
+            JSONArray articlesJsonArray = rootJsonObject.getJSONArray("articles");
+            List<News> articlesList = new ArrayList<>();
+            newsResponse.setArticles(articlesList);
+
+            for (int i = 0; i < articlesJsonArray.length(); i++) {
+
+                JSONObject newsJsonObject = articlesJsonArray.getJSONObject(i);
+
+                NewsSource newsSource = new NewsSource(newsJsonObject.getJSONObject("source").getString("name"));
+
+                articlesList.add(new News(
+                        newsSource,
+                        newsJsonObject.getString("author"),
+                        newsJsonObject.getString("title"),
+                        newsJsonObject.getString("description"),
+                        newsJsonObject.getString("url"),
+                        newsJsonObject.getString("urlToImage"),
+                        newsJsonObject.getString("publishedAt"),
+                        newsJsonObject.getString("content")
+                ));
+            }
+
+        } catch (IOException | JSONException e) {
+                e.printStackTrace();
+        }
+
+        return newsResponse;
+    }
+
+    /**
+     * It parses the news-test.json file using Gson (https://github.com/google/gson)
+     *
+     * @return The NewsResponse object associated with the parsed JSON file.
+     */
     private NewsResponse readJsonFileWithGson() {
 
         NewsResponse newsResponse = null;
