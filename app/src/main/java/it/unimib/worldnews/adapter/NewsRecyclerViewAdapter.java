@@ -67,7 +67,7 @@ public class NewsRecyclerViewAdapter extends RecyclerView.Adapter<NewsRecyclerVi
 
         public void bind(News news) {
             this.textViewNewsTitle.setText(news.getTitle());
-            this.textViewNewsSource.setText(news.getNewsSource().getName());
+            this.textViewNewsSource.setText(news.getNewsSource() != null ? news.getNewsSource().getName() : null);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
