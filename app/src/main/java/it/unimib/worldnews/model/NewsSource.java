@@ -30,7 +30,6 @@ public class NewsSource implements Parcelable {
                 '}';
     }
 
-
     @Override
     public int describeContents() {
         return 0;

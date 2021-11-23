@@ -3,6 +3,11 @@ package it.unimib.worldnews.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Embedded;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -10,16 +15,27 @@ import com.google.gson.annotations.SerializedName;
  * received by the following endpoint:
  * https://newsapi.org/docs/endpoints/top-headlines
  */
+@Entity
 public class News implements Parcelable {
 
+    // Used for Room
+    @PrimaryKey(autoGenerate = true)
+    private int id;
+
+    @Embedded(prefix = "source_")
     @SerializedName("source")
     private NewsSource newsSource;
     private String author;
     private String title;
     private String description;
     private String url;
+
+    @ColumnInfo(name = "url_to_image")
     private String urlToImage;
+
+    @ColumnInfo(name = "published_at")
     private String publishedAt;
+
     private String content;
 
     public News(NewsSource newsSource, String author, String title, String description,
@@ -35,6 +51,14 @@ public class News implements Parcelable {
     }
 
     public News() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public NewsSource getNewsSource() {
