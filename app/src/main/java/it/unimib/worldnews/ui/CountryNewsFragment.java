@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -25,6 +27,7 @@ import it.unimib.worldnews.adapter.NewsRecyclerViewAdapter;
 import it.unimib.worldnews.model.News;
 import it.unimib.worldnews.model.NewsSource;
 import it.unimib.worldnews.repository.INewsRepository;
+import it.unimib.worldnews.repository.NewsMockRepository;
 import it.unimib.worldnews.repository.NewsRepository;
 import it.unimib.worldnews.utils.ResponseCallback;
 import it.unimib.worldnews.utils.SharedPreferencesProvider;
@@ -60,18 +63,17 @@ public class CountryNewsFragment extends Fragment implements ResponseCallback {
                     "Title " + i, null, null, null, null, null);
         }
 
-        /*mINewsRepository = new NewsMockRepository(requireActivity().getApplication(), this,
-                                                    INewsRepository.JsonParser.GSON);*/
-
+        //mINewsRepository = new NewsMockRepository(requireActivity().getApplication(), this, INewsRepository.JsonParser.GSON);
         mINewsRepository = new NewsRepository(requireActivity().getApplication(), this);
         mSharedPreferencesProvider = new SharedPreferencesProvider(requireActivity().getApplication());
-        mINewsRepository.fetchNews(mSharedPreferencesProvider.getCountry(), 0, mSharedPreferencesProvider.getLastUpdate());
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_country_news_recyclerview, container, false);
+
+        mProgressBar = view.findViewById(R.id.progress_bar);
 
         RecyclerView mRecyclerViewCountryNews = view.findViewById(R.id.recyclerview_country_news);
         mRecyclerViewCountryNews.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -83,8 +85,6 @@ public class CountryNewsFragment extends Fragment implements ResponseCallback {
         );
 
         mRecyclerViewCountryNews.setAdapter(mRecyclerViewNewsAdapter);
-
-        mProgressBar = view.findViewById(R.id.progress_bar);
 
         /* ###### Examples with ListView and different types of Adapters ###### */
 
@@ -132,27 +132,26 @@ public class CountryNewsFragment extends Fragment implements ResponseCallback {
             }
         });*/
 
-
         mProgressBar.setVisibility(View.VISIBLE);
+        mINewsRepository.fetchNews(mSharedPreferencesProvider.getCountry(), 0, mSharedPreferencesProvider.getLastUpdate());
 
         return view;
     }
 
     @Override
     public void onResponse(List<News> newsList, long lastUpdate) {
-        mNewsList.addAll(newsList);
-        mSharedPreferencesProvider.setLastUpdate(lastUpdate);
 
-        for (int i = 0; i < mNewsList.size(); i++) {
-            Log.d(TAG, "News: " + mNewsList.get(i));
+        if (newsList != null) {
+            mNewsList.addAll(newsList);
+            mSharedPreferencesProvider.setLastUpdate(lastUpdate);
         }
 
         requireActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 mRecyclerViewNewsAdapter.notifyDataSetChanged();
-                mProgressBar.setVisibility(View.GONE);
                 //mNewsListViewBaseAdapter.notifyDataSetChanged();
+                mProgressBar.setVisibility(View.GONE);
             }
         });
     }
