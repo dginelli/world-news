@@ -68,4 +68,15 @@ public class Constants {
     public static final String SHARED_PREFERENCES_FILE_NAME = "it.unimib.worldnews.preferences";
     public static final String SHARED_PREFERENCES_COUNTRY_OF_INTEREST = "COUNTRY_OF_INTEREST";
     public static final String SHARED_PREFERENCES_TOPICS_OF_INTEREST = "TOPICS_OF_INTEREST";
+
+    public static final String NEWS_API_BASE_URL = "https://newsapi.org/v2/";
+    public static final String TOP_HEADLINES_ENDPOINT = "top-headlines";
+    public static final String TOP_HEADLINES_COUNTRY_PARAMETER = "country";
+    public static final String API_KEY = "";
+
+    public static final String LAST_UPDATE = "last_update";
+    public static final int FRESH_TIMEOUT = 60*1000; // 1 minute in milliseconds
+
+    public static final String NEWS_DATABASE_NAME = "news_db";
+    public static final int DATABASE_VERSION = 1;
 }
