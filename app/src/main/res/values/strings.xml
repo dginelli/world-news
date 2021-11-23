@@ -133,4 +133,7 @@
 
     <string name="delete_all">Delete All</string>
 
+    <string name="error_retrieving_news">Error in retrieving the news</string>
+    <string name="unexpected_error">Unexpected error</string>
+
 </resources>
