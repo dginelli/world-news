@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 
 import java.util.List;
 
+import it.unimib.worldnews.R;
 import it.unimib.worldnews.database.NewsDao;
 import it.unimib.worldnews.database.NewsRoomDatabase;
 import it.unimib.worldnews.model.News;
@@ -27,11 +28,13 @@ public class NewsRepository implements INewsRepository {
 
     private static final String TAG = "NewsRepository";
 
+    private final Application mApplication;
     private final NewsApiService mNewsApiService;
     private final NewsDao mNewsDao;
     private final ResponseCallback mResponseCallback;
 
     public NewsRepository(Application application, ResponseCallback responseCallback) {
+        this.mApplication = application;
         this.mNewsApiService = ServiceLocator.getInstance().getNewsApiService();
         NewsRoomDatabase newsRoomDatabase = ServiceLocator.getInstance().getNewsDao(application);
         this.mNewsDao = newsRoomDatabase.newsDao();
@@ -52,10 +55,13 @@ public class NewsRepository implements INewsRepository {
                 @Override
                 public void onResponse(@NonNull Call<NewsResponse> call, @NonNull Response<NewsResponse> response) {
 
-                    saveDataInDatabase(response.body().getArticles());
-
-                    mResponseCallback.onResponse(response.body() != null ? response.body().getArticles() : null,
-                            System.currentTimeMillis());
+                    if (response.body() != null && response.isSuccessful() && !response.body().getStatus().equals("error")) {
+                        List<News> newsList = response.body().getArticles();
+                        saveDataInDatabase(newsList);
+                        mResponseCallback.onResponse(newsList, System.currentTimeMillis());
+                    } else {
+                        mResponseCallback.onFailure(mApplication.getString(R.string.error_retrieving_news));
+                    }
                 }
 
                 @Override
@@ -70,7 +76,7 @@ public class NewsRepository implements INewsRepository {
     }
 
     /**
-     * It saves news in the local database.
+     * It saves the news in the local database.
      * The method is executed in a Runnable because the database access
      * cannot been executed in the main thread.
      * @param newsList the list of news to be written in the local database.
@@ -87,7 +93,7 @@ public class NewsRepository implements INewsRepository {
     }
 
     /**
-     * It gets news from the local database.
+     * It gets the news from the local database.
      * The method is executed in a Runnable because the database access
      * cannot been executed in the main thread.
      */
