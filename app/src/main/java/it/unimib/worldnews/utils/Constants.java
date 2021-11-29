@@ -75,6 +75,8 @@ public class Constants {
     public static final String API_KEY = "";
 
     public static final String LAST_UPDATE = "last_update";
+    public static final String PAGE_SIZE = "pageSize";
+    public static final int MAX_RESULTS_PER_PAGE = 100;
     public static final int FRESH_TIMEOUT = 60*1000; // 1 minute in milliseconds
 
     public static final String NEWS_DATABASE_NAME = "news_db";

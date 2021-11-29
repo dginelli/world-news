@@ -7,9 +7,13 @@
 
     <fragment
         android:id="@+id/country_news"
-        android:name="it.unimib.worldnews.ui.CountryNewsFragment"
+        android:name="it.unimib.worldnews.ui.country_news.CountryNewsWithLiveDataFragment"
         android:label="@string/country_news"
-        tools:layout="@layout/fragment_country_news_recyclerview" />
+        tools:layout="@layout/fragment_country_news_recyclerview" >
+        <action
+            android:id="@+id/action_country_news_to_countryNewsDetailFragment"
+            app:destination="@id/countryNewsDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/topic_news"
         android:name="it.unimib.worldnews.ui.TopicNewsFragment"
@@ -20,4 +24,13 @@
         android:name="it.unimib.worldnews.ui.FavoriteNewsFragment"
         android:label="@string/favorites"
         tools:layout="@layout/fragment_favorite_news" />
+    <fragment
+        android:id="@+id/countryNewsDetailFragment"
+        android:name="it.unimib.worldnews.ui.CountryNewsDetailFragment"
+        android:label="@string/news_detail"
+        tools:layout="@layout/fragment_country_news_detail" >
+        <argument
+            android:name="news"
+            app:argType="it.unimib.worldnews.model.News" />
+    </fragment>
 </navigation>

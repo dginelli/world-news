@@ -135,5 +135,11 @@
 
     <string name="error_retrieving_news">Error in retrieving the news</string>
     <string name="unexpected_error">Unexpected error</string>
+    <string name="refresh">Refresh</string>
+
+    <string name="no_internet">No Internet connection</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="news_detail">News detail</string>
 
 </resources>

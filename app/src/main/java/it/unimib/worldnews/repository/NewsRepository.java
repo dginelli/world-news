@@ -49,7 +49,7 @@ public class NewsRepository implements INewsRepository {
         // It gets the news from the Web Service if the last download
         // of the news has been performed more than one minute ago
         if (currentTime - lastUpdate > Constants.FRESH_TIMEOUT) {
-            Call<NewsResponse> newsResponseCall = mNewsApiService.getNews(country, Constants.API_KEY);
+            Call<NewsResponse> newsResponseCall = mNewsApiService.getNews(country, Constants.MAX_RESULTS_PER_PAGE, Constants.API_KEY);
 
             newsResponseCall.enqueue(new Callback<NewsResponse>() {
                 @Override

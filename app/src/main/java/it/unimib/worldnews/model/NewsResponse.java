@@ -11,6 +11,7 @@ public class NewsResponse {
     private String status;
     private int totalResults;
     private List<News> articles;
+    private boolean isError;
 
     public NewsResponse(String status, int totalResults, List<News> articles) {
         this.status = status;
@@ -43,6 +44,14 @@ public class NewsResponse {
 
     public void setArticles(List<News> articles) {
         this.articles = articles;
+    }
+
+    public boolean isError() {
+        return isError;
+    }
+
+    public void setError(boolean error) {
+        isError = error;
     }
 
     @Override

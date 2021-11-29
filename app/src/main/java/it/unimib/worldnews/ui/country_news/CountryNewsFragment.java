@@ -1,4 +1,4 @@
-package it.unimib.worldnews.ui;
+package it.unimib.worldnews.ui.country_news;
 
 import android.app.Application;
 import android.os.Bundle;
@@ -63,8 +63,6 @@ public class CountryNewsFragment extends Fragment implements ResponseCallback {
                     "Title " + i, null, null, null, null, null);
         }
 
-        //mINewsRepository = new NewsMockRepository(requireActivity().getApplication(), this, INewsRepository.JsonParser.GSON);
-        mINewsRepository = new NewsRepository(requireActivity().getApplication(), this);
         mSharedPreferencesProvider = new SharedPreferencesProvider(requireActivity().getApplication());
     }
 
