@@ -94,8 +94,11 @@ public class CountryNewsWithLiveDataFragment extends Fragment {
                     showError(newsResponse.getStatus());
                 }
                 mNewsList.clear();
-                mNewsList.addAll(newsResponse.getArticles());
-                mRecyclerViewNewsAdapter.notifyDataSetChanged();
+                if (newsResponse.getArticles() != null) {
+                    mNewsList.addAll(newsResponse.getArticles());
+                    mRecyclerViewNewsAdapter.notifyDataSetChanged();
+                }
+
                 mProgressBar.setVisibility(View.GONE);
             }
         };

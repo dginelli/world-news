@@ -53,7 +53,7 @@ public class CountryNewsViewModel extends AndroidViewModel {
     }
 
     public void refreshNews() {
-        fetchNews();
+        mINewsRepository.refreshNews(country);
     }
 
     private void fetchNews() {

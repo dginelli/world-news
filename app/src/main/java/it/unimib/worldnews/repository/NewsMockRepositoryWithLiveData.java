@@ -3,6 +3,7 @@ package it.unimib.worldnews.repository;
 import android.app.Application;
 import android.util.JsonReader;
 import android.util.JsonToken;
+import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
 
@@ -24,6 +25,8 @@ import it.unimib.worldnews.model.NewsResponse;
 import it.unimib.worldnews.model.NewsSource;
 
 public class NewsMockRepositoryWithLiveData implements INewsRepositoryWithLiveData {
+
+    private static final String TAG = "NewsMockRepWithLiveData";
 
     private static final String NEWS_JSON_FILE = "news-test.json";
 
@@ -58,6 +61,28 @@ public class NewsMockRepositoryWithLiveData implements INewsRepositoryWithLiveDa
         mNewsResponseLiveData.postValue(newsResponse);
 
         return mNewsResponseLiveData;
+    }
+
+    @Override
+    public void refreshNews(String country) {
+        Log.d(TAG, "refreshNews");
+        NewsResponse newsResponse = null;
+
+        switch (mJsonParser) {
+            case JSON_READER:
+                newsResponse = readJsonFileWithJsonReader();
+                break;
+            case JSON_OBJECT_ARRAY:
+                newsResponse = readJsonFileWithJsonObjectArray();
+                break;
+            case GSON:
+                newsResponse = readJsonFileWithGson();
+                break;
+            case JSON_ERROR:
+                break;
+        }
+
+        mNewsResponseLiveData.postValue(newsResponse);
     }
 
     /**
