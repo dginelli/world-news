@@ -70,6 +70,8 @@ public class NewsRepositoryWithLiveData implements INewsRepositoryWithLiveData  
 
                 if (response.body() != null && response.isSuccessful() && !response.body().getStatus().equals("error")) {
                     saveDataInDatabase(response.body().getArticles());
+                    // It changes the NewsResponse object associated with the LiveData
+                    // in CountryNewsWithLiveDataFragment
                     mNewsResponseLiveData.postValue(response.body());
                     mSharedPreferencesProvider.setLastUpdate(System.currentTimeMillis());
                 } else {
@@ -124,6 +126,8 @@ public class NewsRepositoryWithLiveData implements INewsRepositoryWithLiveData  
                     newsResponse.setError(true);
                 }
 
+                // It changes the NewsResponse object associated to the LiveData
+                // in CountryNewsWithLiveDataFragment
                 mNewsResponseLiveData.postValue(newsResponse);
 
                 //mResponseCallback.onResponse(mNewsDao.getAll(), lastUpdate);

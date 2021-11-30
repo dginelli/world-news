@@ -6,6 +6,10 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
+/**
+ * Custom ViewModelProvider to be able to have a custom constructor
+ * for the CountryNewsViewModel class.
+ */
 public class CountryNewsViewModelFactory implements ViewModelProvider.Factory {
 
     private final Application mApplication;

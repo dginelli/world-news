@@ -43,6 +43,8 @@ public class CountryNewsWithLiveDataFragment extends Fragment {
 
     private List<News> mNewsList;
 
+    private int number;
+
     public CountryNewsWithLiveDataFragment() {
         // Required empty public constructor
     }
@@ -59,6 +61,9 @@ public class CountryNewsWithLiveDataFragment extends Fragment {
 
         SharedPreferencesProvider mSharedPreferencesProvider = new SharedPreferencesProvider(requireActivity().getApplication());
 
+        // Two different ways to create the CountryNewsViewModel object:
+        // 1) Standard
+        // 2) Custom that uses the class CountryNewsViewModelFactory
         mCountryNewsViewModel = new ViewModelProvider(requireActivity()).get(CountryNewsViewModel.class);
         /*mCountryNewsViewModel = new ViewModelProvider(requireActivity(), new CountryNewsViewModelFactory(
                 requireActivity().getApplication(),
@@ -87,14 +92,15 @@ public class CountryNewsWithLiveDataFragment extends Fragment {
 
         mRecyclerViewCountryNews.setAdapter(mRecyclerViewNewsAdapter);
 
+        // The Observer associated with the LiveData to show the news
         final Observer<NewsResponse> observer = new Observer<NewsResponse>() {
             @Override
             public void onChanged(NewsResponse newsResponse) {
                 if (newsResponse.isError()) {
                     showError(newsResponse.getStatus());
                 }
-                mNewsList.clear();
                 if (newsResponse.getArticles() != null) {
+                    mNewsList.clear();
                     mNewsList.addAll(newsResponse.getArticles());
                     mRecyclerViewNewsAdapter.notifyDataSetChanged();
                 }
@@ -103,7 +109,13 @@ public class CountryNewsWithLiveDataFragment extends Fragment {
             }
         };
 
+        number = mCountryNewsViewModel.getNumber();
+        Log.d(TAG, "onCreateView: " + number);
+
         mProgressBar.setVisibility(View.VISIBLE);
+
+        // It associates the LiveData object (obtained with the instruction mCountryNewsViewModel.getNews())
+        // to the LiveData object.
         mCountryNewsViewModel.getNews().observe(getViewLifecycleOwner(), observer);
 
         return view;
@@ -123,6 +135,7 @@ public class CountryNewsWithLiveDataFragment extends Fragment {
             } else {
                 showError(getString(R.string.no_internet));
             }
+            mCountryNewsViewModel.setNumber(++number);
 
             return true;
         }
@@ -130,12 +143,21 @@ public class CountryNewsWithLiveDataFragment extends Fragment {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * It shows a SnackBar with an error message.
+     * @param errorMessage The error message to be shown.
+     */
     private void showError(String errorMessage) {
         Snackbar.make(requireActivity().findViewById(android.R.id.content),
                 errorMessage, Snackbar.LENGTH_LONG).show();
         mProgressBar.setVisibility(View.GONE);
     }
 
+    /**
+     * It checks if the device is connected to Internet.
+     * See: https://developer.android.com/training/monitoring-device-state/connectivity-status-type#DetermineConnection
+     * @return true if the device is connected to Internet; false otherwise.
+     */
     private boolean isConnected() {
         ConnectivityManager cm =
                 (ConnectivityManager)requireActivity().getSystemService(Context.CONNECTIVITY_SERVICE);

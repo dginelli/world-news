@@ -58,6 +58,8 @@ public class NewsMockRepositoryWithLiveData implements INewsRepositoryWithLiveDa
                 break;
         }
 
+        // It changes the NewsResponse object associated to the LiveData
+        // in CountryNewsWithLiveDataFragment
         mNewsResponseLiveData.postValue(newsResponse);
 
         return mNewsResponseLiveData;
@@ -82,6 +84,8 @@ public class NewsMockRepositoryWithLiveData implements INewsRepositoryWithLiveDa
                 break;
         }
 
+        // It changes the NewsResponse object associated to the LiveData
+        // in CountryNewsWithLiveDataFragment
         mNewsResponseLiveData.postValue(newsResponse);
     }
 

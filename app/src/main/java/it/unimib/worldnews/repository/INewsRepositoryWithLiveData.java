@@ -4,6 +4,9 @@ import androidx.lifecycle.MutableLiveData;
 
 import it.unimib.worldnews.model.NewsResponse;
 
+/**
+ * Interface for Repositories that manage News objects with LiveData.
+ */
 public interface INewsRepositoryWithLiveData {
 
     enum JsonParser {
