@@ -15,5 +15,6 @@ public interface NewsApiService {
     Call<NewsResponse> getNews(
             @Query(Constants.TOP_HEADLINES_COUNTRY_PARAMETER) String country,
             @Query(Constants.PAGE_SIZE) int pageSize,
+            @Query("page") int page,
             @Header("Authorization") String apiKey);
 }

@@ -12,11 +12,13 @@ public class NewsResponse {
     private int totalResults;
     private List<News> articles;
     private boolean isError;
+    private boolean isLoading;
 
-    public NewsResponse(String status, int totalResults, List<News> articles) {
+    public NewsResponse(String status, int totalResults, List<News> articles, boolean isLoading) {
         this.status = status;
         this.totalResults = totalResults;
         this.articles = articles;
+        this.isLoading = isLoading;
     }
 
     public NewsResponse() {
@@ -54,12 +56,22 @@ public class NewsResponse {
         isError = error;
     }
 
+    public boolean isLoading() {
+        return isLoading;
+    }
+
+    public void setLoading(boolean loading) {
+        isLoading = loading;
+    }
+
     @Override
     public String toString() {
         return "NewsResponse{" +
                 "status='" + status + '\'' +
                 ", totalResults=" + totalResults +
                 ", articles=" + articles +
+                ", isError=" + isError +
+                ", isLoading=" + isLoading +
                 '}';
     }
 }

@@ -8,7 +8,6 @@ import androidx.lifecycle.MutableLiveData;
 
 import it.unimib.worldnews.model.NewsResponse;
 import it.unimib.worldnews.repository.INewsRepositoryWithLiveData;
-import it.unimib.worldnews.repository.NewsMockRepositoryWithLiveData;
 import it.unimib.worldnews.repository.NewsRepositoryWithLiveData;
 import it.unimib.worldnews.utils.Constants;
 import it.unimib.worldnews.utils.SharedPreferencesProvider;
@@ -23,15 +22,47 @@ public class CountryNewsViewModel extends AndroidViewModel {
     private final INewsRepositoryWithLiveData mINewsRepository;
     private MutableLiveData<NewsResponse> mNewsResponseLiveData;
     private final SharedPreferencesProvider mSharedPreferencesProvider;
-    private String country;
-    private int number;
+    private final String country;
 
-    public int getNumber() {
-        return number;
+    private int page = 1;
+    private int currentResults;
+    private int totalResult;
+    private boolean isLoading;
+
+    public int getPage() {
+        return page;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setPage(int page) {
+        this.page = page;
+    }
+
+    public int getCurrentResults() {
+        return currentResults;
+    }
+
+    public void setCurrentResults(int currentResults) {
+        this.currentResults = currentResults;
+    }
+
+    public int getTotalResult() {
+        return totalResult;
+    }
+
+    public void setTotalResult(int totalResult) {
+        this.totalResult = totalResult;
+    }
+
+    public boolean isLoading() {
+        return isLoading;
+    }
+
+    public void setLoading(boolean loading) {
+        isLoading = loading;
+    }
+
+    public MutableLiveData<NewsResponse> getNewsResponseLiveData() {
+        return mNewsResponseLiveData;
     }
 
     /**
@@ -83,10 +114,21 @@ public class CountryNewsViewModel extends AndroidViewModel {
     }
 
     /**
+     * It is used to download news every time
+     * the user scrolls the list.
+     */
+    public void getMoreNewsResource() {
+        mINewsRepository.fetchMoreNews(country, page);
+    }
+
+    /**
      * It downloads the latest news.
      */
     public void refreshNews() {
-        mINewsRepository.refreshNews(country);
+        setPage(1);
+        setCurrentResults(0);
+        setTotalResult(0);
+        mINewsRepository.refreshNews(country, page);
     }
 
     /**
@@ -95,6 +137,6 @@ public class CountryNewsViewModel extends AndroidViewModel {
      */
     private void fetchNews() {
         mNewsResponseLiveData = mINewsRepository.fetchNews(country,
-                Constants.MAX_RESULTS_PER_PAGE, mSharedPreferencesProvider.getLastUpdate());
+                page, mSharedPreferencesProvider.getLastUpdate());
     }
 }

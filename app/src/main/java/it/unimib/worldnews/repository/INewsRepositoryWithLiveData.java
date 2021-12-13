@@ -17,5 +17,6 @@ public interface INewsRepositoryWithLiveData {
     };
 
     MutableLiveData<NewsResponse> fetchNews(String country, int page, long lastUpdate);
-    void refreshNews(String country);
+    void fetchMoreNews(String country, int page);
+    void refreshNews(String country, int page);
 }

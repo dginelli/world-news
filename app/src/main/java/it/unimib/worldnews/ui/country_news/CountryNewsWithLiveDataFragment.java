@@ -16,6 +16,7 @@ import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
@@ -33,6 +34,9 @@ import it.unimib.worldnews.model.News;
 import it.unimib.worldnews.model.NewsResponse;
 import it.unimib.worldnews.utils.SharedPreferencesProvider;
 
+/**
+ * It shows the news by country using the ViewModel and LiveData classes.
+ */
 public class CountryNewsWithLiveDataFragment extends Fragment {
     private static final String TAG = "CountryNewsLiveDataFrag";
 
@@ -43,7 +47,13 @@ public class CountryNewsWithLiveDataFragment extends Fragment {
 
     private List<News> mNewsList;
 
-    private int number;
+    private int totalItemCount; // Total number of news
+    private int lastVisibleItem; // The position of the last visible news item
+    private int visibleItemCount; // Number or total visible news items
+
+    // Based on this value, the process of loading more news is anticipated or postponed
+    // Look at the if condition at line 119 to see how it is used
+    private final int threshold = 1;
 
     public CountryNewsWithLiveDataFragment() {
         // Required empty public constructor
@@ -78,8 +88,10 @@ public class CountryNewsWithLiveDataFragment extends Fragment {
 
         mProgressBar = view.findViewById(R.id.progress_bar);
 
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+
         RecyclerView mRecyclerViewCountryNews = view.findViewById(R.id.recyclerview_country_news);
-        mRecyclerViewCountryNews.setLayoutManager(new LinearLayoutManager(getContext()));
+        mRecyclerViewCountryNews.setLayoutManager(layoutManager);
 
         mRecyclerViewNewsAdapter = new NewsRecyclerViewAdapter(mNewsList,
                 news -> {
@@ -92,33 +104,108 @@ public class CountryNewsWithLiveDataFragment extends Fragment {
 
         mRecyclerViewCountryNews.setAdapter(mRecyclerViewNewsAdapter);
 
+        mRecyclerViewCountryNews.addOnScrollListener(new RecyclerView.OnScrollListener() {
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+
+                boolean isConnected = isConnected();
+
+                if (isConnected && totalItemCount != mCountryNewsViewModel.getTotalResult()) {
+
+                    totalItemCount = layoutManager.getItemCount();
+                    lastVisibleItem = layoutManager.findLastVisibleItemPosition();
+                    visibleItemCount = layoutManager.getChildCount();
+
+                    // Condition to enable the loading of other news while the user is scrolling the list
+                    if (totalItemCount == visibleItemCount || (
+                            totalItemCount <= (lastVisibleItem + threshold) && dy > 0 && !mCountryNewsViewModel.isLoading()) &&
+                            mCountryNewsViewModel.getNews().getValue() != null &&
+                            mCountryNewsViewModel.getCurrentResults() != mCountryNewsViewModel.getNews().getValue().getTotalResults()
+                    ) {
+                        NewsResponse articleListResponse = new NewsResponse();
+
+                        MutableLiveData<NewsResponse> newsListMutableLiveData = mCountryNewsViewModel.getNewsResponseLiveData();
+
+                        if (newsListMutableLiveData.getValue() != null) {
+
+                            mCountryNewsViewModel.setLoading(true);
+
+                            List<News> currentArticleList = newsListMutableLiveData.getValue().getArticles();
+
+                            // It adds a null element to enable the visualization of the loading item
+                            // (it is managed by the class NewsRecyclerViewAdapter)
+                            currentArticleList.add(null);
+                            articleListResponse.setArticles(currentArticleList);
+                            articleListResponse.setStatus(newsListMutableLiveData.getValue().getStatus());
+                            articleListResponse.setTotalResults(newsListMutableLiveData.getValue().getTotalResults());
+                            articleListResponse.setLoading(true);
+                            newsListMutableLiveData.setValue(articleListResponse);
+
+                            int page = mCountryNewsViewModel.getPage() + 1;
+                            mCountryNewsViewModel.setPage(page);
+
+                            mCountryNewsViewModel.getMoreNewsResource();
+                        }
+                    }
+                }
+            }
+        });
+
         // The Observer associated with the LiveData to show the news
         final Observer<NewsResponse> observer = new Observer<NewsResponse>() {
             @Override
             public void onChanged(NewsResponse newsResponse) {
                 if (newsResponse.isError()) {
-                    showError(newsResponse.getStatus());
+                    updateUIForFailure(newsResponse.getStatus());
                 }
-                if (newsResponse.getArticles() != null) {
-                    mNewsList.clear();
-                    mNewsList.addAll(newsResponse.getArticles());
-                    mRecyclerViewNewsAdapter.notifyDataSetChanged();
+                if (newsResponse.getArticles() != null && newsResponse.getTotalResults() != -1) {
+                    mCountryNewsViewModel.setTotalResult(newsResponse.getTotalResults());
+                        updateUIForSuccess(newsResponse.getArticles(), newsResponse.isLoading());
+                } else {
+                        updateUIForFailure(newsResponse.getStatus());
                 }
-
-                mProgressBar.setVisibility(View.GONE);
             }
         };
-
-        number = mCountryNewsViewModel.getNumber();
-        Log.d(TAG, "onCreateView: " + number);
-
-        mProgressBar.setVisibility(View.VISIBLE);
 
         // It associates the LiveData object (obtained with the instruction mCountryNewsViewModel.getNews())
         // to the LiveData object.
         mCountryNewsViewModel.getNews().observe(getViewLifecycleOwner(), observer);
 
         return view;
+    }
+
+    /**
+     * It shows the news retrieved by the Repository.
+     * @param newsList the list of news to be shown.
+     * @param isLoading true when the progress bar is visible, false otherwise.
+     */
+    private void updateUIForSuccess(List<News> newsList, boolean isLoading) {
+        mNewsList.clear();
+        mNewsList.addAll(newsList);
+
+        if (!isLoading) {
+            mCountryNewsViewModel.setLoading(false);
+            mCountryNewsViewModel.setCurrentResults(newsList.size());
+        }
+
+        requireActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                mRecyclerViewNewsAdapter.notifyDataSetChanged();
+            }
+        });
+    }
+
+    /**
+     * It shows a warning message to the user with a Snackbar.
+     * @param message The warning message to be shown in the Snackbar.
+     */
+    private void updateUIForFailure(String message) {
+        Log.d(TAG, "Web Service call failed: " + message);
+        Snackbar.make(requireActivity().findViewById(android.R.id.content),
+                message, Snackbar.LENGTH_SHORT).show();
     }
 
     @Override
@@ -130,12 +217,11 @@ public class CountryNewsWithLiveDataFragment extends Fragment {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.refresh) {
             if (isConnected()) {
-                mProgressBar.setVisibility(View.VISIBLE);
+                totalItemCount = 0;
                 mCountryNewsViewModel.refreshNews();
             } else {
                 showError(getString(R.string.no_internet));
             }
-            mCountryNewsViewModel.setNumber(++number);
 
             return true;
         }

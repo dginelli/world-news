@@ -47,7 +47,7 @@ public class NewsRepositoryWithLiveData implements INewsRepositoryWithLiveData  
         // It gets the news from the Web Service if the last download
         // of the news has been performed more than one minute ago
         if (currentTime - lastUpdate > Constants.FRESH_TIMEOUT) {
-            getNews(country);
+            getNews(country, page);
         } else {
             Log.d(TAG, "Data read from the local database");
             readDataFromDatabase(lastUpdate, null);
@@ -57,12 +57,52 @@ public class NewsRepositoryWithLiveData implements INewsRepositoryWithLiveData  
     }
 
     @Override
-    public void refreshNews(String country) {
-        getNews(country);
+    public void fetchMoreNews(String country, int page) {
+        Call<NewsResponse> call = mNewsApiService.getNews(country, Constants.MAX_NEWS_RESULTS_PER_PAGE, page, Constants.NEWS_API_KEY);
+
+        call.enqueue(new Callback<NewsResponse>() {
+            @Override
+            public void onResponse(@NonNull Call<NewsResponse> call, @NonNull Response<NewsResponse> response) {
+                if (response.body() != null && response.isSuccessful() && !response.body().getStatus().equals("error")) {
+
+                    List<News> newsList = response.body().getArticles();
+                    addNews(newsList);
+
+                    List<News> currentNewsList = mNewsResponseLiveData.getValue().getArticles();
+
+                    // It removes the null element added to show the loading item in the RecyclerView
+                    currentNewsList.remove(currentNewsList.size() - 1);
+                    currentNewsList.addAll(newsList);
+
+                    for (News news : newsList) {
+                        Log.d(TAG, news.getTitle());
+                    }
+
+                    NewsResponse newResponse = new NewsResponse();
+                    newResponse.setStatus(response.body().getStatus());
+                    newResponse.setArticles(currentNewsList);
+                    newResponse.setLoading(false);
+                    newResponse.setTotalResults(response.body().getTotalResults());
+
+                    mNewsResponseLiveData.postValue(newResponse);
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<NewsResponse> call, @NonNull Throwable t) {
+                mNewsResponseLiveData.postValue(new NewsResponse(t.getMessage(), -1, null, false));
+            }
+        });
     }
 
-    private void getNews(String country) {
-        Call<NewsResponse> newsResponseCall = mNewsApiService.getNews(country, Constants.MAX_RESULTS_PER_PAGE, Constants.API_KEY);
+    @Override
+    public void refreshNews(String country, int page) {
+        getNews(country, page);
+    }
+
+    private void getNews(String country, int page) {
+
+        Call<NewsResponse> newsResponseCall = mNewsApiService.getNews(country, Constants.MAX_NEWS_RESULTS_PER_PAGE, page, Constants.NEWS_API_KEY);
 
         newsResponseCall.enqueue(new Callback<NewsResponse>() {
             @Override
@@ -99,6 +139,16 @@ public class NewsRepositoryWithLiveData implements INewsRepositoryWithLiveData  
             public void run() {
                 mNewsDao.deleteAll();
                 mNewsDao.insertNewsList(newsList);
+            }
+        };
+        new Thread(runnable).start();
+    }
+
+    private void addNews(List<News> articleList) {
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                mNewsDao.insertNewsList(articleList);
             }
         };
         new Thread(runnable).start();

@@ -3,6 +3,7 @@ package it.unimib.worldnews.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,9 +15,12 @@ import it.unimib.worldnews.R;
 import it.unimib.worldnews.model.News;
 
 /**
- * RecyclerView Adapter to show the news in a RecyclerView
+ * RecyclerView Adapter to show the news in a RecyclerView.
  */
-public class NewsRecyclerViewAdapter extends RecyclerView.Adapter<NewsRecyclerViewAdapter.NewsViewHolder> {
+public class NewsRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+
+    private static final int NEWS_VIEW_TYPE = 0;
+    private static final int LOADING_VIEW_TYPE = 1;
 
     // To detect a click on the RecyclerView items
     public interface OnItemClickListener {
@@ -31,18 +35,39 @@ public class NewsRecyclerViewAdapter extends RecyclerView.Adapter<NewsRecyclerVi
         this.mOnItemClickListener = onItemClickListener;
     }
 
+    @Override
+    public int getItemViewType(int position) {
+        if (mNewsList.get(position) == null) {
+            return LOADING_VIEW_TYPE;
+        } else {
+            return NEWS_VIEW_TYPE;
+        }
+    }
+
     @NonNull
     @Override
-    public NewsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(
-                parent.getContext()).inflate(R.layout.country_news_list_item, parent, false);
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        // Create a new view, which defines the UI of the list item
+        View view = null;
 
-        return new NewsViewHolder(view);
+        if (viewType == NEWS_VIEW_TYPE) {
+            view = LayoutInflater.from(parent.getContext()).
+                    inflate(R.layout.country_news_list_item, parent, false);
+            return new NewsViewHolder(view);
+        } else {
+            view = LayoutInflater.from(parent.getContext()).
+                    inflate(R.layout.news_loading_item, parent, false);
+            return new LoadingNewsViewHolder(view);
+        }
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NewsViewHolder holder, int position) {
-        holder.bind(mNewsList.get(position));
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+        if (holder instanceof NewsViewHolder) {
+            ((NewsViewHolder) holder).bind(mNewsList.get(position));
+        } else if (holder instanceof LoadingNewsViewHolder) {
+            ((LoadingNewsViewHolder) holder).activate();
+        }
     }
 
     @Override
@@ -66,15 +91,31 @@ public class NewsRecyclerViewAdapter extends RecyclerView.Adapter<NewsRecyclerVi
         }
 
         public void bind(News news) {
-            this.textViewNewsTitle.setText(news.getTitle());
-            this.textViewNewsSource.setText(news.getNewsSource() != null ? news.getNewsSource().getName() : null);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mOnItemClickListener.onItemClick(news);
-                }
-            });
+            if (news != null) {
+                this.textViewNewsTitle.setText(news.getTitle());
+                this.textViewNewsSource.setText(news.getNewsSource() != null ? news.getNewsSource().getName() : null);
+
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mOnItemClickListener.onItemClick(news);
+                    }
+                });
+            }
+        }
+    }
+
+    public static class LoadingNewsViewHolder extends RecyclerView.ViewHolder {
+        private final ProgressBar progressBar;
+
+        LoadingNewsViewHolder(View view) {
+            super(view);
+            progressBar = view.findViewById(R.id.progressbar_loading_news);
+        }
+
+        public void activate() {
+            progressBar.setIndeterminate(true);
         }
     }
 }

@@ -66,7 +66,7 @@ public class NewsMockRepositoryWithLiveData implements INewsRepositoryWithLiveDa
     }
 
     @Override
-    public void refreshNews(String country) {
+    public void refreshNews(String country, int page) {
         Log.d(TAG, "refreshNews");
         NewsResponse newsResponse = null;
 
@@ -87,6 +87,11 @@ public class NewsMockRepositoryWithLiveData implements INewsRepositoryWithLiveDa
         // It changes the NewsResponse object associated to the LiveData
         // in CountryNewsWithLiveDataFragment
         mNewsResponseLiveData.postValue(newsResponse);
+    }
+
+    @Override
+    public void fetchMoreNews(String country, int page) {
+        // Not used in this context
     }
 
     /**
