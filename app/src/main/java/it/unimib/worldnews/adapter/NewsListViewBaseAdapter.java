@@ -53,10 +53,10 @@ public class NewsListViewBaseAdapter extends BaseAdapter {
         }
 
         TextView textViewNewsTitle = convertView.findViewById(R.id.news_title);
-        TextView textViewSourceTitle = convertView.findViewById(R.id.news_source);
+        //TextView textViewSourceTitle = convertView.findViewById(R.id.news_source);
 
         textViewNewsTitle.setText(mListNews.get(position).getTitle());
-        textViewSourceTitle.setText(mListNews.get(position).getNewsSource().getName());
+        //textViewSourceTitle.setText(mListNews.get(position).getNewsSource().getName());
 
         return convertView;
     }

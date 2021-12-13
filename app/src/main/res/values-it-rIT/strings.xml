@@ -139,5 +139,6 @@
 
     <string name="no_internet">Connessione Internet assente</string>
     <string name="news_detail">Dettaglio news</string>
+    <string name="news_image">Immagine associata alla news</string>
 
 </resources>

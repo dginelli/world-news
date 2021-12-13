@@ -35,10 +35,10 @@ public class NewsListViewArrayAdapter extends ArrayAdapter<News> {
         }
 
         TextView textViewNewsTitle = convertView.findViewById(R.id.news_title);
-        TextView textViewSourceTitle = convertView.findViewById(R.id.news_source);
+        //TextView textViewSourceTitle = convertView.findViewById(R.id.news_source);
 
         textViewNewsTitle.setText(mArrayNews[position].getTitle());
-        textViewSourceTitle.setText(mArrayNews[position].getNewsSource().getName());
+        //textViewSourceTitle.setText(mArrayNews[position].getNewsSource().getName());
 
         return convertView;
     }

@@ -3,16 +3,20 @@ package it.unimib.worldnews.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 import it.unimib.worldnews.R;
 import it.unimib.worldnews.model.News;
+import it.unimib.worldnews.utils.DateTimeUtil;
 
 /**
  * RecyclerView Adapter to show the news in a RecyclerView.
@@ -81,20 +85,41 @@ public class NewsRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
 
     public class NewsViewHolder extends RecyclerView.ViewHolder {
 
+        private final ImageView imageViewNews;
         private final TextView textViewNewsTitle;
-        private final TextView textViewNewsSource;
+        private final TextView textViewNewsDescription;
+        private final TextView textViewNewsDate;
 
         public NewsViewHolder(@NonNull View itemView) {
             super(itemView);
-            this.textViewNewsTitle = itemView.findViewById(R.id.news_title);
-            this.textViewNewsSource = itemView.findViewById(R.id.news_source);
+            imageViewNews = itemView.findViewById(R.id.article_image);
+            textViewNewsTitle = itemView.findViewById(R.id.news_title);
+            textViewNewsDescription = itemView.findViewById(R.id.news_description);
+            textViewNewsDate = itemView.findViewById(R.id.news_date);
         }
 
         public void bind(News news) {
 
             if (news != null) {
-                this.textViewNewsTitle.setText(news.getTitle());
-                this.textViewNewsSource.setText(news.getNewsSource() != null ? news.getNewsSource().getName() : null);
+
+                String url = news.getUrlToImage();
+                String newUrl = null;
+
+                if (url != null) {
+                    // This action is a possible alternative to manage HTTP addresses that don't work
+                    // in the apps that target API level 28 or higher.
+                    // If it doesn't work, the other option is this one:
+                    // https://developer.android.com/guide/topics/manifest/application-element#usesCleartextTraffic
+                    newUrl = url.replace("http://", "https://").trim();
+
+                    // Download the image associated with the article
+                    Glide.with(itemView.getContext()).load(newUrl).
+                            placeholder(R.drawable.ic_baseline_cloud_download_24).into(imageViewNews);
+                }
+
+                textViewNewsTitle.setText(news.getTitle());
+                textViewNewsDescription.setText(news.getDescription());
+                textViewNewsDate.setText(DateTimeUtil.getDate(news.getPublishedAt()));
 
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
