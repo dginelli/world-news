@@ -13,6 +13,7 @@ import it.unimib.worldnews.repository.UserRepository;
 
 public class UserViewModel extends AndroidViewModel {
 
+    private MutableLiveData<AuthenticationResponse> mAuthenticationResponseLiveData;
     private final IUserRepository mUserRepository;
 
     public UserViewModel(@NonNull Application application) {
@@ -21,14 +22,21 @@ public class UserViewModel extends AndroidViewModel {
     }
 
     public MutableLiveData<AuthenticationResponse> signInWithEmail(String email, String password) {
-        return mUserRepository.signInWithEmail(email, password);
+        mAuthenticationResponseLiveData = mUserRepository.signInWithEmail(email, password);
+        return mAuthenticationResponseLiveData;
     }
 
     public MutableLiveData<AuthenticationResponse> signUpWithEmail(String email, String password) {
-        return mUserRepository.createUserWithEmail(email, password);
+        mAuthenticationResponseLiveData = mUserRepository.createUserWithEmail(email, password);
+        return mAuthenticationResponseLiveData;
     }
 
     public MutableLiveData<AuthenticationResponse> signUpWithGoogle(Intent intent) {
-        return mUserRepository.createUserWithGoogle(intent);
+        mAuthenticationResponseLiveData = mUserRepository.createUserWithGoogle(intent);
+        return mAuthenticationResponseLiveData;
+    }
+
+    public void clear() {
+        mAuthenticationResponseLiveData.postValue(null);
     }
 }

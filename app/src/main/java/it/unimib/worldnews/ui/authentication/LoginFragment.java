@@ -123,5 +123,6 @@ public class LoginFragment extends Fragment {
     private void updateUIForFailure(String message) {
         Snackbar.make(requireActivity().findViewById(android.R.id.content),
                 message, Snackbar.LENGTH_SHORT).show();
+        mUserViewModel.clear();
     }
 }

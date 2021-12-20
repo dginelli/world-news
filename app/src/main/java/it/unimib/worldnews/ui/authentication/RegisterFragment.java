@@ -57,10 +57,12 @@ public class RegisterFragment extends Fragment {
                 String email = editTextEmail.getText().toString();
                 String password = editTextPassword.getText().toString();
                 mUserViewModel.signUpWithEmail(email, password).observe(getViewLifecycleOwner(), authenticationResponse -> {
-                    if (authenticationResponse.isSuccess()) {
-                        Navigation.findNavController(v).navigate(R.id.preferencesActivity);
-                    } else {
-                        updateUIForFailure(authenticationResponse.getMessage());
+                    if (authenticationResponse != null) {
+                        if (authenticationResponse.isSuccess()) {
+                            Navigation.findNavController(v).navigate(R.id.preferencesActivity);
+                        } else {
+                            updateUIForFailure(authenticationResponse.getMessage());
+                        }
                     }
                 });
             }
@@ -76,5 +78,6 @@ public class RegisterFragment extends Fragment {
     private void updateUIForFailure(String message) {
         Snackbar.make(requireActivity().findViewById(android.R.id.content),
                 message, Snackbar.LENGTH_SHORT).show();
+        mUserViewModel.clear();
     }
 }

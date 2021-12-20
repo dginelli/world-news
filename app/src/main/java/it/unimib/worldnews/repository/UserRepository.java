@@ -32,7 +32,7 @@ public class UserRepository implements IUserRepository {
     private final Application mApplication;
     private final SharedPreferencesProvider mSharedPreferencesProvider;
 
-    private MutableLiveData<AuthenticationResponse> mAuthenticationResponseLiveData;
+    private final MutableLiveData<AuthenticationResponse> mAuthenticationResponseLiveData;
 
     public UserRepository(Application application) {
         mAuth = FirebaseAuth.getInstance();
