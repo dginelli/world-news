@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/authentication_navigation.xml"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="it.unimib.worldnews.ui.authentication.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_preferencesActivity"
+            app:destination="@id/preferencesActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="it.unimib.worldnews.ui.authentication.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_preferencesActivity"
+            app:destination="@id/preferencesActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/preferencesActivity"
+        android:name="it.unimib.worldnews.ui.PreferencesActivity"
+        android:label="activity_preferences_linear_layout"
+        tools:layout="@layout/activity_preferences_linear_layout" />
+</navigation>

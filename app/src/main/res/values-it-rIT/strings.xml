@@ -141,5 +141,13 @@
     <string name="news_detail">Dettaglio news</string>
     <string name="news_image">Immagine associata alla news</string>
     <string name="button_news_url">Leggi la notizia</string>
+    <string name="form_email_address">Indirizzo email</string>
+    <string name="form_password">Password</string>
+    <string name="skip">Salta</string>
+    <string name="email_signin">Autenticati con email</string>
+    <string name="world">World</string>
+    <string name="news">News</string>
+    <string name="google_signin">Autenticati con Google</string>
+    <string name="create_account">Non hai un account? Registrati</string>
 
 </resources>

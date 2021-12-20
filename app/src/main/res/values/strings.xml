@@ -138,10 +138,17 @@
     <string name="refresh">Refresh</string>
 
     <string name="no_internet">No Internet connection</string>
-<!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+
     <string name="news_detail">News detail</string>
     <string name="news_image">Image associated with the news</string>
     <string name="button_news_url">Read the news</string>
+    <string name="form_email_address">Email address</string>
+    <string name="form_password">Password</string>
+    <string name="skip">Skip</string>
+    <string name="email_signin">Sign in with email</string>
+    <string name="world">World</string>
+    <string name="news">News</string>
+    <string name="google_signin">Sign in with Google</string>
+    <string name="create_account">Don\'t you have an account? Sign up</string>
 
 </resources>
