@@ -16,17 +16,18 @@
             android:name=".ui.authentication.AuthenticationActivity"
             android:exported="true"
             android:windowSoftInputMode="stateAlwaysHidden"
-            android:theme="@style/AuthenticationTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:theme="@style/AuthenticationTheme"
+            android:noHistory="true">
         </activity>
         <activity
             android:name=".ui.LaunchScreenActivity"
             android:exported="true"
             android:launchMode="singleTask"
             android:theme="@style/LaunchTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".ui.NewsActivity"
@@ -35,6 +36,7 @@
             android:name=".ui.PreferencesActivity"
             android:exported="true"
             android:theme="@style/NoCustomToolbarTheme"
+            android:launchMode="singleTask"
             android:noHistory="true" />
     </application>
 

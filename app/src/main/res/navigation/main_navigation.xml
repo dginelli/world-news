@@ -26,4 +26,12 @@
     <action
         android:id="@+id/action_from_launchScreenActivity_to_preferencesActivity"
         app:destination="@id/preferencesActivity" />
+    <action
+        android:id="@+id/action_from_launchScreenActivity_to_authenticationActivity"
+        app:destination="@id/authenticationActivity" />
+    <activity
+        android:id="@+id/authenticationActivity"
+        android:name="it.unimib.worldnews.ui.authentication.AuthenticationActivity"
+        android:label="activity_authentication"
+        tools:layout="@layout/activity_authentication" />
 </navigation>

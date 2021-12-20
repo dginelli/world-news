@@ -10,9 +10,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import java.util.Set;
 
 import it.unimib.worldnews.R;
+import it.unimib.worldnews.ui.authentication.LoginFragment;
 import it.unimib.worldnews.utils.Constants;
 
 /**
@@ -20,6 +24,8 @@ import it.unimib.worldnews.utils.Constants;
  * the application and choose which Activity to start.
  */
 public class LaunchScreenActivity extends AppCompatActivity {
+
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,23 +39,33 @@ public class LaunchScreenActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_launch_screen);
 
+        // Initialize Firebase Auth
+        mAuth = FirebaseAuth.getInstance();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.launch_screen_fragment_container_view);
         NavController navController = navHostFragment.getNavController();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
 
-        // Start another Activity with Navigation Controller
-        if (arePreferencesSet()) {
-            navController.navigate(R.id.action_from_launchScreenActivity_to_newsActivity);
+        if (currentUser != null) {
+            // Start another Activity with Navigation Controller
+            if (arePreferencesSet()) {
+                navController.navigate(R.id.action_from_launchScreenActivity_to_newsActivity);
+            } else {
+                navController.navigate(R.id.action_from_launchScreenActivity_to_preferencesActivity);
+            }
+            /* The equivalent way with explicit Intent
+            if (arePreferencesSet()) {
+                startActivity(new Intent(this, NewsActivity.class));
+            } else {
+                startActivity(new Intent(this, PreferencesActivity.class));
+            }*/
         } else {
-            navController.navigate(R.id.action_from_launchScreenActivity_to_preferencesActivity);
+            navController.navigate(R.id.action_from_launchScreenActivity_to_authenticationActivity);
         }
-
-        /* The equivalent way with explicit Intent
-        if (arePreferencesSet()) {
-            startActivity(new Intent(this, NewsActivity.class));
-        } else {
-            startActivity(new Intent(this, PreferencesActivity.class));
-        }*/
-
         finish();
     }
 

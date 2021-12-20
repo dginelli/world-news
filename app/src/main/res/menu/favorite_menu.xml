@@ -6,4 +6,10 @@
         android:icon="@drawable/ic_baseline_delete_24"
         android:title="@string/delete_all"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_baseline_logout_24"
+        android:title="@string/logout"
+        app:showAsAction="never" />
 </menu>

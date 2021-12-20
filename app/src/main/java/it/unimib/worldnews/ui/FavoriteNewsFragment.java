@@ -1,5 +1,7 @@
 package it.unimib.worldnews.ui;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,7 +16,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import it.unimib.worldnews.R;
+import it.unimib.worldnews.ui.authentication.AuthenticationActivity;
+import it.unimib.worldnews.utils.SharedPreferencesProvider;
 
 /**
  * It shows the favorite news.
@@ -55,6 +61,13 @@ public class FavoriteNewsFragment extends Fragment {
         if (item.getItemId() == R.id.delete_all) {
             Log.d(TAG, "onOptionsItemSelected: " + item);
             return true;
+        } else if (item.getItemId() == R.id.logout) {
+            FirebaseAuth.getInstance().signOut();
+            SharedPreferencesProvider sharedPreferencesProvider =
+                    new SharedPreferencesProvider(requireActivity().getApplication());
+            sharedPreferencesProvider.deleteAll();
+            startActivity(new Intent(requireActivity(), AuthenticationActivity.class));
+            requireActivity().finish();
         }
 
         return super.onOptionsItemSelected(item);

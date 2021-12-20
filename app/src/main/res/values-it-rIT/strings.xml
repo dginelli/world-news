@@ -152,5 +152,6 @@
     <string name="email_signup">Registrati</string>
     <string name="registration_failure">Si è verificato un errore</string>
     <string name="google_signup">Registrati con Google</string>
+    <string name="logout">Logout</string>
 
 </resources>
