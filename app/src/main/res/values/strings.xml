@@ -150,5 +150,8 @@
     <string name="news">News</string>
     <string name="google_signin">Sign in with Google</string>
     <string name="create_account">Don\'t you have an account? Sign up</string>
+    <string name="email_signup">Sign up with email</string>
+    <string name="registration_failure">An error occured</string>
+    <string name="google_signup">Sign up with Google</string>
 
 </resources>

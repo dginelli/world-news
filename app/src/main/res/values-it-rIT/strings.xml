@@ -149,5 +149,8 @@
     <string name="news">News</string>
     <string name="google_signin">Autenticati con Google</string>
     <string name="create_account">Non hai un account? Registrati</string>
+    <string name="email_signup">Registrati</string>
+    <string name="registration_failure">Si è verificato un errore</string>
+    <string name="google_signup">Registrati con Google</string>
 
 </resources>
