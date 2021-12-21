@@ -11,8 +11,8 @@ android {
         applicationId "it.unimib.worldnews"
         minSdk 16
         targetSdk 31
-        versionCode 7
-        versionName "0.0.7"
+        versionCode 8
+        versionName "0.0.8"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
