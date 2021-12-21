@@ -85,4 +85,9 @@ public class Constants {
     public static final String AUTHENTICATION_TOKEN = "AUTHENTICATION_TOKEN";
     public static final String USER_ID = "USER_ID";
     public static final String DEFAULT_WEB_CLIENT_ID = "96542353010-e74gqtjvt7k58nod92ojb6s3sqtm0kuu.apps.googleusercontent.com";
+
+    public static final String FIREBASE_DATABASE_URL = "https://world-news-a1cbf-default-rtdb.europe-west1.firebasedatabase.app/";
+
+    public static final String USER_COLLECTION = "users";
+    public static final String USER_EMAIL = "email";
 }
