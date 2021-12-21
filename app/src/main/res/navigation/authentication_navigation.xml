@@ -28,7 +28,7 @@
     </fragment>
     <activity
         android:id="@+id/preferencesActivity"
-        android:name="it.unimib.worldnews.ui.PreferencesActivity"
+        android:name="it.unimib.worldnews.ui.preferences.PreferencesActivity"
         android:label="activity_preferences_linear_layout"
         tools:layout="@layout/activity_preferences_linear_layout" />
 </navigation>

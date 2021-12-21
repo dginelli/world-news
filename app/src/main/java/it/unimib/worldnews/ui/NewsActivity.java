@@ -17,6 +17,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import it.unimib.worldnews.R;
 import it.unimib.worldnews.model.News;
+import it.unimib.worldnews.ui.preferences.PreferencesActivity;
 
 public class NewsActivity extends AppCompatActivity {
 

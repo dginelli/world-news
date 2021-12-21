@@ -33,7 +33,7 @@
             android:name=".ui.NewsActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.PreferencesActivity"
+            android:name=".ui.preferences.PreferencesActivity"
             android:exported="true"
             android:theme="@style/NoCustomToolbarTheme"
             android:launchMode="singleTask"
