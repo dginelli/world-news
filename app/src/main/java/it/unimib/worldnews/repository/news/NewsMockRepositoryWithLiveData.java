@@ -1,8 +1,11 @@
-package it.unimib.worldnews.repository;
+package it.unimib.worldnews.repository.news;
 
 import android.app.Application;
 import android.util.JsonReader;
 import android.util.JsonToken;
+import android.util.Log;
+
+import androidx.lifecycle.MutableLiveData;
 
 import com.google.gson.Gson;
 
@@ -17,33 +20,29 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import it.unimib.worldnews.R;
 import it.unimib.worldnews.model.News;
 import it.unimib.worldnews.model.NewsResponse;
 import it.unimib.worldnews.model.NewsSource;
-import it.unimib.worldnews.utils.ResponseCallback;
+import it.unimib.worldnews.repository.news.INewsRepositoryWithLiveData;
 
-/**
- * Mock Repository that gets the news from the local JSON file news-test.json,
- * that is saved in the "assets" folder.
- */
-public class NewsMockRepository implements INewsRepository {
+public class NewsMockRepositoryWithLiveData implements INewsRepositoryWithLiveData {
+
+    private static final String TAG = "NewsMockRepWithLiveData";
 
     private static final String NEWS_JSON_FILE = "news-test.json";
 
     private final Application mApplication;
-    private final ResponseCallback mResponseCallback;
-    private final JsonParser mJsonParser;
+    private final INewsRepositoryWithLiveData.JsonParser mJsonParser;
+    private MutableLiveData<NewsResponse> mNewsResponseLiveData;
 
-    public NewsMockRepository(Application application, ResponseCallback responseCallback, JsonParser jsonParser) {
+    public NewsMockRepositoryWithLiveData(Application application, INewsRepositoryWithLiveData.JsonParser jsonParser) {
         this.mApplication = application;
-        this.mResponseCallback = responseCallback;
         this.mJsonParser = jsonParser;
+        this.mNewsResponseLiveData = new MutableLiveData<>();
     }
 
     @Override
-    public void fetchNews(String country, int page, long lastUpdate) {
-
+    public MutableLiveData<NewsResponse> fetchNews(String country, int page, long lastUpdate) {
         NewsResponse newsResponse = null;
 
         switch (mJsonParser) {
@@ -57,15 +56,43 @@ public class NewsMockRepository implements INewsRepository {
                 newsResponse = readJsonFileWithGson();
                 break;
             case JSON_ERROR:
-                mResponseCallback.onFailure(mApplication.getString(R.string.error_retrieving_news));
                 break;
         }
 
-        if (newsResponse != null) {
-            mResponseCallback.onResponse(newsResponse.getArticles(), System.currentTimeMillis());
-        } else {
-            mResponseCallback.onFailure(mApplication.getString(R.string.error_retrieving_news));
+        // It changes the NewsResponse object associated to the LiveData
+        // in CountryNewsWithLiveDataFragment
+        mNewsResponseLiveData.postValue(newsResponse);
+
+        return mNewsResponseLiveData;
+    }
+
+    @Override
+    public void refreshNews(String country, int page) {
+        Log.d(TAG, "refreshNews");
+        NewsResponse newsResponse = null;
+
+        switch (mJsonParser) {
+            case JSON_READER:
+                newsResponse = readJsonFileWithJsonReader();
+                break;
+            case JSON_OBJECT_ARRAY:
+                newsResponse = readJsonFileWithJsonObjectArray();
+                break;
+            case GSON:
+                newsResponse = readJsonFileWithGson();
+                break;
+            case JSON_ERROR:
+                break;
         }
+
+        // It changes the NewsResponse object associated to the LiveData
+        // in CountryNewsWithLiveDataFragment
+        mNewsResponseLiveData.postValue(newsResponse);
+    }
+
+    @Override
+    public void fetchMoreNews(String country, int page) {
+        // Not used in this context
     }
 
     /**

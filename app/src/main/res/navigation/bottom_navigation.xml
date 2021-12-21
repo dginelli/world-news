@@ -26,7 +26,7 @@
         tools:layout="@layout/fragment_favorite_news" />
     <fragment
         android:id="@+id/countryNewsDetailFragment"
-        android:name="it.unimib.worldnews.ui.CountryNewsDetailFragment"
+        android:name="it.unimib.worldnews.ui.country_news.CountryNewsDetailFragment"
         android:label="@string/news_detail"
         tools:layout="@layout/fragment_country_news_detail" >
         <argument

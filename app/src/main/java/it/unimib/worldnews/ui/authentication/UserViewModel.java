@@ -8,8 +8,8 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
 import it.unimib.worldnews.model.AuthenticationResponse;
-import it.unimib.worldnews.repository.IUserRepository;
-import it.unimib.worldnews.repository.UserRepository;
+import it.unimib.worldnews.repository.user.IUserRepository;
+import it.unimib.worldnews.repository.user.UserRepository;
 
 public class UserViewModel extends AndroidViewModel {
 

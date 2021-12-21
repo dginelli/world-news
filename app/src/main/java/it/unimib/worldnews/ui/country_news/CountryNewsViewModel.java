@@ -7,9 +7,8 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
 import it.unimib.worldnews.model.NewsResponse;
-import it.unimib.worldnews.repository.INewsRepositoryWithLiveData;
-import it.unimib.worldnews.repository.NewsRepositoryWithLiveData;
-import it.unimib.worldnews.utils.Constants;
+import it.unimib.worldnews.repository.news.INewsRepositoryWithLiveData;
+import it.unimib.worldnews.repository.news.NewsRepositoryWithLiveData;
 import it.unimib.worldnews.utils.SharedPreferencesProvider;
 
 /**

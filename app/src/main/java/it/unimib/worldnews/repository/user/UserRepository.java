@@ -1,4 +1,4 @@
-package it.unimib.worldnews.repository;
+package it.unimib.worldnews.repository.user;
 
 import android.app.Application;
 import android.content.Intent;

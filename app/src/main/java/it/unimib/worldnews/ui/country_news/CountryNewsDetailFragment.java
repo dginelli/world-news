@@ -1,4 +1,4 @@
-package it.unimib.worldnews.ui;
+package it.unimib.worldnews.ui.country_news;
 
 import android.content.Intent;
 import android.net.Uri;

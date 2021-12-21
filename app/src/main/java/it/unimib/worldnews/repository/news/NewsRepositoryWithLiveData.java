@@ -1,4 +1,4 @@
-package it.unimib.worldnews.repository;
+package it.unimib.worldnews.repository.news;
 
 import android.app.Application;
 import android.util.Log;
@@ -13,6 +13,7 @@ import it.unimib.worldnews.database.NewsDao;
 import it.unimib.worldnews.database.NewsRoomDatabase;
 import it.unimib.worldnews.model.News;
 import it.unimib.worldnews.model.NewsResponse;
+import it.unimib.worldnews.repository.news.INewsRepositoryWithLiveData;
 import it.unimib.worldnews.service.NewsApiService;
 import it.unimib.worldnews.utils.Constants;
 import it.unimib.worldnews.utils.ServiceLocator;
@@ -21,7 +22,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class NewsRepositoryWithLiveData implements INewsRepositoryWithLiveData  {
+public class NewsRepositoryWithLiveData implements INewsRepositoryWithLiveData {
 
     private static final String TAG = "NewsRepWithLiveData";
 

@@ -1,6 +1,5 @@
 package it.unimib.worldnews.ui.country_news;
 
-import android.app.Application;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -12,8 +11,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -26,9 +23,7 @@ import it.unimib.worldnews.adapter.NewsListViewBaseAdapter;
 import it.unimib.worldnews.adapter.NewsRecyclerViewAdapter;
 import it.unimib.worldnews.model.News;
 import it.unimib.worldnews.model.NewsSource;
-import it.unimib.worldnews.repository.INewsRepository;
-import it.unimib.worldnews.repository.NewsMockRepository;
-import it.unimib.worldnews.repository.NewsRepository;
+import it.unimib.worldnews.repository.news.INewsRepository;
 import it.unimib.worldnews.utils.ResponseCallback;
 import it.unimib.worldnews.utils.SharedPreferencesProvider;
 
