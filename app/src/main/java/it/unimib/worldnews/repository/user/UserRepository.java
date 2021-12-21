@@ -23,6 +23,9 @@ import it.unimib.worldnews.R;
 import it.unimib.worldnews.model.AuthenticationResponse;
 import it.unimib.worldnews.utils.SharedPreferencesProvider;
 
+/**
+ * Repository to authenticate a User using Firebase Authentication.
+ */
 public class UserRepository implements IUserRepository {
 
     private static final String TAG = "UserRepository";

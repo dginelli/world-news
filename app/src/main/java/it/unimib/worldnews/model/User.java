@@ -1,5 +1,8 @@
 package it.unimib.worldnews.model;
 
+/**
+ * It represents a User saved into Firebase Realtime Database.
+ */
 public class User {
     private String uId;
     private String email;

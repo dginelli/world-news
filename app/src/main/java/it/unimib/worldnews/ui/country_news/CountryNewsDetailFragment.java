@@ -3,6 +3,8 @@ package it.unimib.worldnews.ui.country_news;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
@@ -35,7 +37,7 @@ public class CountryNewsDetailFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         News news = CountryNewsDetailFragmentArgs.fromBundle(getArguments()).getNews();

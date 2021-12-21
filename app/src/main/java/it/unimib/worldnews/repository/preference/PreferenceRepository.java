@@ -17,6 +17,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import it.unimib.worldnews.model.User;
 import it.unimib.worldnews.utils.Constants;
 
+/**
+ * Repository to read and write the user preferences saved into
+ * Firebase Realtime Database.
+ */
 public class PreferenceRepository implements IPreferenceRepository {
 
     private static final String TAG = "PreferenceRepository";
@@ -52,11 +56,11 @@ public class PreferenceRepository implements IPreferenceRepository {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 if (task.isSuccessful()) {
-                    Log.d("firebase", String.valueOf(task.getResult().getValue()));
+                    Log.d(TAG, String.valueOf(task.getResult().getValue()));
                     mUserLiveData.postValue(task.getResult().getValue(User.class));
                 }
                 else {
-                    Log.d("firebase", "Error getting data", task.getException());
+                    Log.d(TAG, "Error getting data", task.getException());
                     mUserLiveData.postValue(null);
                 }
             }

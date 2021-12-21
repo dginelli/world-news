@@ -11,6 +11,9 @@ import it.unimib.worldnews.model.AuthenticationResponse;
 import it.unimib.worldnews.repository.user.IUserRepository;
 import it.unimib.worldnews.repository.user.UserRepository;
 
+/**
+ * ViewModel to manage the user authentication.
+ */
 public class UserViewModel extends AndroidViewModel {
 
     private MutableLiveData<AuthenticationResponse> mAuthenticationResponseLiveData;

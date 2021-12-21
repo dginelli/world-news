@@ -1,5 +1,9 @@
 package it.unimib.worldnews.model;
 
+/**
+ * It represents a response used to manage the
+ * Firebase Authentication response.
+ */
 public class AuthenticationResponse {
 
     private boolean success;

@@ -22,6 +22,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * Repository to get the news using the API provided by NewsApi.org (https://newsapi.org)
+ * and to manage them with LiveData.
+ */
 public class NewsRepositoryWithLiveData implements INewsRepositoryWithLiveData {
 
     private static final String TAG = "NewsRepWithLiveData";

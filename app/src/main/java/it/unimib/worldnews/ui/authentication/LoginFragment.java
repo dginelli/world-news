@@ -29,6 +29,9 @@ import com.google.firebase.auth.FirebaseUser;
 import it.unimib.worldnews.R;
 import it.unimib.worldnews.utils.Constants;
 
+/**
+ * It shows the login screen.
+ */
 public class LoginFragment extends Fragment {
 
     private static final String TAG = "LoginFragment";

@@ -6,6 +6,9 @@ import android.os.Bundle;
 
 import it.unimib.worldnews.R;
 
+/**
+ * Activity to manage the login and registration of a user.
+ */
 public class AuthenticationActivity extends AppCompatActivity {
 
     @Override

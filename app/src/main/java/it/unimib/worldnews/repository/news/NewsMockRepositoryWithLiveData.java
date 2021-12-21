@@ -25,6 +25,10 @@ import it.unimib.worldnews.model.NewsResponse;
 import it.unimib.worldnews.model.NewsSource;
 import it.unimib.worldnews.repository.news.INewsRepositoryWithLiveData;
 
+/**
+ * Mock Repository that gets the news from the local JSON file news-test.json
+ * saved in the "assets" folder, and manage them with LiveData.
+ */
 public class NewsMockRepositoryWithLiveData implements INewsRepositoryWithLiveData {
 
     private static final String TAG = "NewsMockRepWithLiveData";

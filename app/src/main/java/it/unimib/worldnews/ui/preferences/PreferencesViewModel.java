@@ -10,6 +10,9 @@ import it.unimib.worldnews.model.User;
 import it.unimib.worldnews.repository.preference.IPreferenceRepository;
 import it.unimib.worldnews.repository.preference.PreferenceRepository;
 
+/**
+ * ViewModel to manage the user preferences.
+ */
 public class PreferencesViewModel extends AndroidViewModel {
 
     private MutableLiveData<Boolean> mResponseLiveData;

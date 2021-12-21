@@ -25,7 +25,9 @@ import com.google.android.material.snackbar.Snackbar;
 import it.unimib.worldnews.R;
 import it.unimib.worldnews.utils.Constants;
 
-
+/**
+ * It shows the registration screen.
+ */
 public class RegisterFragment extends Fragment {
 
     private static final String TAG = "RegisterFragment";

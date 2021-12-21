@@ -2,6 +2,9 @@ package it.unimib.worldnews.model;
 
 import java.util.List;
 
+/**
+ * It represents the user preferences.
+ */
 public class UserPreference {
     private String favoriteCountry;
     private List<String> favoriteTopics;
