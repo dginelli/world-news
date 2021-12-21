@@ -13,6 +13,7 @@ import it.unimib.worldnews.repository.preference.PreferenceRepository;
 public class PreferencesViewModel extends AndroidViewModel {
 
     private MutableLiveData<Boolean> mResponseLiveData;
+    private MutableLiveData<User> mUserLiveData;
     private final IPreferenceRepository mPreferencesRepository;
 
     public PreferencesViewModel(@NonNull Application application) {
@@ -23,5 +24,10 @@ public class PreferencesViewModel extends AndroidViewModel {
     public MutableLiveData<Boolean> saveUserPreferences(User user) {
         mResponseLiveData = mPreferencesRepository.saveUserPreferences(user);
         return mResponseLiveData;
+    }
+
+    public MutableLiveData<User> readUserInformation(String uId) {
+        mUserLiveData = mPreferencesRepository.readUserInfo(uId);
+        return mUserLiveData;
     }
 }

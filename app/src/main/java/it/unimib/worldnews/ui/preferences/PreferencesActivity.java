@@ -15,6 +15,7 @@ import android.widget.Spinner;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -90,13 +91,13 @@ public class PreferencesActivity extends AppCompatActivity {
 
         final Button mButtonNext = findViewById(R.id.button_next);
 
-        setViewsChecked();
+        //setViewsChecked(); // It retrieves the user preferences from local
 
         mPreferencesViewModel.saveUserPreferences(mUser).observe(this, response -> {
             if (response) {
-                Log.d(TAG, "ok");
+                Log.d(TAG, "Preferences saved on Firebase Realtime Database");
             } else {
-                Log.d(TAG, "ko");
+                Log.d(TAG, "Preferences not saved on Firebase Realtime Database");
             }
         });
 
@@ -119,6 +120,21 @@ public class PreferencesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        if (currentUser != null) {
+            mPreferencesViewModel.readUserInformation(currentUser.getUid()).observe(this, user -> {
+                if (user != null) {
+                    setViewsCheckedWithFirebase(user.getUserPreference().getFavoriteCountry(),
+                            new HashSet<>(user.getUserPreference().getFavoriteTopics()));
+                }
+            });
+        }
     }
 
     @Override
@@ -329,6 +345,252 @@ public class PreferencesActivity extends AppCompatActivity {
         String countryOfInterest = sharedPref.getString(Constants.SHARED_PREFERENCES_COUNTRY_OF_INTEREST, null);
         Set<String> topicsOfInterest = sharedPref.getStringSet(Constants.SHARED_PREFERENCES_TOPICS_OF_INTEREST, null);
 
+        if (countryOfInterest != null) {
+            switch (countryOfInterest) {
+                case Constants.ARGENTINA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.argentina)));
+                    break;
+                case Constants.AUSTRALIA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.australia)));
+                    break;
+                case Constants.AUSTRIA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.austria)));
+                    break;
+                case Constants.BELGIUM:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.belgium)));
+                    break;
+                case Constants.BRAZIL:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.brazil)));
+                    break;
+                case Constants.BULGARIA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.bulgaria)));
+                    break;
+                case Constants.CANADA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.canada)));
+                    break;
+                case Constants.CHINA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.china)));
+                    break;
+                case Constants.COLOMBIA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.colombia)));
+                    break;
+                case Constants.CUBA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.cuba)));
+                    break;
+                case Constants.CZECH_REPUBLIC:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.czech_republic)));
+                    break;
+                case Constants.EGYPT:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.egypt)));
+                    break;
+                case Constants.FRANCE:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.france)));
+                    break;
+                case Constants.GERMANY:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.germany)));
+                    break;
+                case Constants.GREECE:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.greece)));
+                    break;
+                case Constants.HONG_KONG:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.hong_kong)));
+                    break;
+                case Constants.HUNGARY:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.hungary)));
+                    break;
+                case Constants.INDIA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.india)));
+                    break;
+                case Constants.INDONESIA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.indonesia)));
+                    break;
+                case Constants.IRELAND:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.ireland)));
+                    break;
+                case Constants.ISRAEL:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.israel)));
+                    break;
+                case Constants.ITALY:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.italy)));
+                    break;
+                case Constants.JAPAN:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.japan)));
+                    break;
+                case Constants.LATVIA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.latvia)));
+                    break;
+                case Constants.LITHUANIA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.lithuania)));
+                    break;
+                case Constants.MALAYSIA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.malaysia)));
+                    break;
+                case Constants.MEXICO:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.mexico)));
+                    break;
+                case Constants.MOROCCO:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.morocco)));
+                    break;
+                case Constants.NETHERLANDS:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.netherlands)));
+                    break;
+                case Constants.NEW_ZEALAND:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.new_zealand)));
+                    break;
+                case Constants.NIGERIA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.nigeria)));
+                    break;
+                case Constants.NORWAY:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.norway)));
+                    break;
+                case Constants.PHILIPPINES:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.philippines)));
+                    break;
+                case Constants.POLAND:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.poland)));
+                    break;
+                case Constants.PORTUGAL:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.portugal)));
+                    break;
+                case Constants.ROMANIA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.romania)));
+                    break;
+                case Constants.RUSSIA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.russia)));
+                    break;
+                case Constants.SAUDI_ARABIA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.saudi_arabia)));
+                    break;
+                case Constants.SERBIA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.serbia)));
+                    break;
+                case Constants.SINGAPORE:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.singapore)));
+                    break;
+                case Constants.SLOVAKIA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.slovakia)));
+                    break;
+                case Constants.SLOVENIA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.slovenia)));
+                    break;
+                case Constants.SOUTH_AFRICA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.south_africa)));
+                    break;
+                case Constants.SOUTH_KOREA:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.south_korea)));
+                    break;
+                case Constants.SWEDEN:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.sweden)));
+                    break;
+                case Constants.SWITZERLAND:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.switzerland)));
+                    break;
+                case Constants.TAIWAN:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.taiwan)));
+                    break;
+                case Constants.THAILAND:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.thailand)));
+                    break;
+                case Constants.TURKEY:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.turkey)));
+                    break;
+                case Constants.UNITED_ARAB_EMIRATES:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.united_arab_emirates)));
+                    break;
+                case Constants.UKRAINE:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.ukraine)));
+                    break;
+                case Constants.UNITED_KINGDOM:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.united_kingdom)));
+                    break;
+                case Constants.UNITED_STATES:
+                    mSpinnerCountries.setSelection(
+                            getSpinnerPositionBasedOnValue(getResources().getString(R.string.united_states)));
+                    break;
+            }
+        }
+
+        if (topicsOfInterest != null) {
+            if (topicsOfInterest.contains(Constants.BUSINESS)) {
+                mCheckboxBusiness.setChecked(true);
+            }
+            if (topicsOfInterest.contains(Constants.ENTERTAINMENT)) {
+                mCheckboxEntertainment.setChecked(true);
+            }
+            if (topicsOfInterest.contains(Constants.GENERAL)) {
+                mCheckboxGeneral.setChecked(true);
+            }
+            if (topicsOfInterest.contains(Constants.HEALTH)) {
+                mCheckboxHealth.setChecked(true);
+            }
+            if (topicsOfInterest.contains(Constants.SCIENCE)) {
+                mCheckboxScience.setChecked(true);
+            }
+            if (topicsOfInterest.contains(Constants.SPORTS)) {
+                mCheckboxSport.setChecked(true);
+            }
+            if (topicsOfInterest.contains(Constants.TECHNOLOGY)) {
+                mCheckboxTechnology.setChecked(true);
+            }
+        }
+    }
+
+    /**
+     * It sets the spinner and the checkbox values based on what it has been saved in Firebase Realtime Databsse.
+     */
+    private void setViewsCheckedWithFirebase(String countryOfInterest, Set<String> topicsOfInterest) {
         if (countryOfInterest != null) {
             switch (countryOfInterest) {
                 case Constants.ARGENTINA:

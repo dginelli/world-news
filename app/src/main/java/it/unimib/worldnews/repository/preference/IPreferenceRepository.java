@@ -6,4 +6,5 @@ import it.unimib.worldnews.model.User;
 
 public interface IPreferenceRepository {
     MutableLiveData<Boolean> saveUserPreferences(User user);
+    MutableLiveData<User> readUserInfo(String uId);
 }
